@@ -1,10 +1,11 @@
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
-import Footer from "@/components/Footer";
+import type { Metadata } from "next";
+
+import { ClerkProvider } from "@clerk/nextjs";
+
 import { cn } from "@/lib/utils";
-import Navbar from "@/components/Navbar";
-import { ModalProvider } from "@/components/providers/modal-providers";
+
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,17 +20,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="h-full" style={{ scrollBehavior: "smooth" }}>
-      <body
-        className={cn("relative h-full font-sans antialiased", inter.className)}
-      >
-        <main className="relative flex flex-col min-h-screen">
-          <Navbar />
-          <ModalProvider />
-          <div className="flex-1 flex-grow">{children}</div>
-          <Footer />
-        </main>
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en" className="h-full" style={{ scrollBehavior: "smooth" }}>
+        <body
+          className={cn(
+            "relative h-full font-sans antialiased",
+            inter.className
+          )}
+        >
+          {children}
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

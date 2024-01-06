@@ -7,8 +7,12 @@ import NavItems from "./NavItems";
 
 import Image from "./Image";
 import { Facebook, Instagram, Youtube } from "lucide-react";
+import { UserButton, auth } from "@clerk/nextjs";
+import { PRODUCT_CATEGORIES } from "@/configs";
 
-const Navbar = async () => {
+const Navbar = () => {
+  const { userId } = auth();
+  const filterMenu = PRODUCT_CATEGORIES.filter((e) => e.label !== "Manage");
   return (
     <div className="sticky inset-x-0 top-0 z-50 h-16 bg-white">
       <header className="relative bg-white">
@@ -30,7 +34,7 @@ const Navbar = async () => {
                 </Link>
               </div>
               <div className="z-50 hidden lg:ml-8 lg:block lg:self-stretch">
-                <NavItems />
+                <NavItems data={userId ? PRODUCT_CATEGORIES : filterMenu} />
               </div>
               <div className="flex items-center ml-auto">
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
@@ -66,6 +70,15 @@ const Navbar = async () => {
                       <Youtube className="w-5 h-5" />
                     </Link>
                   </div>
+                  {userId ? (
+                    <>
+                      <span
+                        className="w-px h-6 bg-gray-200"
+                        aria-hidden="true"
+                      />
+                      <UserButton afterSignOutUrl="/" />
+                    </>
+                  ) : null}
                 </div>
               </div>
             </div>
