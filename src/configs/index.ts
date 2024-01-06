@@ -62,4 +62,25 @@ export const PRODUCT_CATEGORIES = [
       },
     ],
   },
+  {
+    label: "Manage",
+    value: "manage" as const,
+    featured: [
+      {
+        name: "Manage Tentang",
+        href: "/manage/tentang",
+        imageSrc: "/assets/img2.jpg",
+      },
+      {
+        name: "Manage Materi",
+        href: "/manage/materi",
+        imageSrc: "/assets/img2.jpg",
+      },
+      {
+        name: "Manage Berita",
+        href: "/manage/berita",
+        imageSrc: "/assets/img2.jpg",
+      },
+    ],
+  },
 ];

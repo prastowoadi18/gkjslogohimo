@@ -1,6 +1,7 @@
 import Image from "@/components/Image";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { buttonVariants } from "@/components/ui/button";
+
 import { Church } from "lucide-react";
 
 import Link from "next/link";

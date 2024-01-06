@@ -158,7 +158,7 @@ const Footer = () => {
         </MaxWidthWrapper>
       </footer>
       <MaxWidthWrapper className="pt-5 pb-10">
-        <h1 className="font-semibold text-muted-foreground">
+        <h1 className="font-semibold text-sm text-muted-foreground">
           Dibuat oleh GKJ Slogohimo 2023
         </h1>
       </MaxWidthWrapper>
