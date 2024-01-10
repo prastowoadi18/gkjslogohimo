@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { DetailTentangModal } from "../modals/detail-tentang-modal";
+import { DetailPendetaModal } from "../modals/detail-pendeta-modal";
 
 export const ModalProvider = () => {
   const [isMounted, setIsMounted] = useState(false);
@@ -16,7 +16,7 @@ export const ModalProvider = () => {
 
   return (
     <>
-      <DetailTentangModal />
+      <DetailPendetaModal />
     </>
   );
 };

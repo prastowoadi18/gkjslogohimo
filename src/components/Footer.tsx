@@ -1,4 +1,3 @@
-import React from "react";
 import MaxWidthWrapper from "./MaxWidthWrapper";
 
 import {
@@ -57,7 +56,7 @@ const Footer = () => {
                 <h1 className="text-lg font-semibold">Tautan</h1>
               </div>
               <div className="mt-5 lg:mt-10">
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                   <div className="flex flex-col">
                     <Link
                       href="/#berita_terbaru"
@@ -66,22 +65,16 @@ const Footer = () => {
                       Berita Terbaru
                     </Link>
                     <Link
-                      href="/materi/khotbah"
+                      href="/tentang/majelis"
                       className="text-base text-muted-foreground mb-3 hover:text-blue-500 transition-all duration-300"
                     >
-                      Bahan Khotbah
+                      Majelis
                     </Link>
                     <Link
-                      href="/renungan"
-                      className="text-base text-muted-foreground mb-3 hover:text-blue-500 transition-all duration-300"
-                    >
-                      Renungan Harian
-                    </Link>
-                    <Link
-                      href="/materi/kurikulum"
+                      href="/berita"
                       className="text-base text-muted-foreground hover:text-blue-500 transition-all duration-300"
                     >
-                      Kurikululum
+                      Berita
                     </Link>
                   </div>
                   <div className="flex flex-col">
@@ -93,23 +86,9 @@ const Footer = () => {
                     </Link>
                     <Link
                       href="/tentang/pepanthan"
-                      className="text-base text-muted-foreground mb-3 hover:text-blue-500 transition-all duration-300"
-                    >
-                      Pepantahan
-                    </Link>
-                    <Link
-                      href="/tentang/majelis"
                       className="text-base text-muted-foreground hover:text-blue-500 transition-all duration-300"
                     >
-                      Majelis
-                    </Link>
-                  </div>
-                  <div className="flex flex-col">
-                    <Link
-                      href="/berita"
-                      className="text-base text-muted-foreground mb-3 hover:text-blue-500 transition-all duration-300"
-                    >
-                      Berita
+                      Pepantahan
                     </Link>
                   </div>
                 </div>

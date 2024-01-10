@@ -21,27 +21,6 @@ export const PRODUCT_CATEGORIES = [
     ],
   },
   {
-    label: "Materi",
-    value: "materi" as const,
-    featured: [
-      {
-        name: "Khotbah",
-        href: `/materi/khotbah`,
-        imageSrc: "/assets/img2.jpg",
-      },
-      {
-        name: "Renungan",
-        href: "/materi/renungan",
-        imageSrc: "/assets/img2.jpg",
-      },
-      {
-        name: "Kurikulum",
-        href: "/materi/kurikulum",
-        imageSrc: "/assets/img2.jpg",
-      },
-    ],
-  },
-  {
     label: "Berita",
     value: "berita" as const,
     featured: [
@@ -83,4 +62,25 @@ export const PRODUCT_CATEGORIES = [
       },
     ],
   },
+  // {
+  //   label: "Materi",
+  //   value: "materi" as const,
+  //   featured: [
+  //     {
+  //       name: "Khotbah",
+  //       href: `/materi/khotbah`,
+  //       imageSrc: "/assets/img2.jpg",
+  //     },
+  //     {
+  //       name: "Renungan",
+  //       href: "/materi/renungan",
+  //       imageSrc: "/assets/img2.jpg",
+  //     },
+  //     {
+  //       name: "Kurikulum",
+  //       href: "/materi/kurikulum",
+  //       imageSrc: "/assets/img2.jpg",
+  //     },
+  //   ],
+  // },
 ];
