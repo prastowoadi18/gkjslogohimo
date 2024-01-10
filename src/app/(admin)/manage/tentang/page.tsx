@@ -24,37 +24,9 @@ const ManageTentangPage = () => {
             <Settings className="w-5 h-5 group-hover:scale-125 group-hover:text-blue-400 transition-all duration-300" />
           </div>
           <div className="flex-1">
-            <h1 className="text-lg font-semibold">Sejarah Gereja</h1>
-            <Link
-              href="/manage/tentang/sejarah"
-              className="text-base group-hover:text-blue-400 transition-all duration-300 italic"
-            >
-              manage
-            </Link>
-          </div>
-        </div>
-        <div className="flex items-center border-b py-3 group">
-          <div className="px-3 flex-none">
-            <Settings className="w-5 h-5 group-hover:scale-125 group-hover:text-blue-400 transition-all duration-300" />
-          </div>
-          <div className="flex-1">
             <h1 className="text-lg font-semibold">Majelis</h1>
             <Link
-              href="/"
-              className="text-base group-hover:text-blue-400 transition-all duration-300 italic"
-            >
-              manage
-            </Link>
-          </div>
-        </div>
-        <div className="flex items-center py-3 group">
-          <div className="px-3 flex-none">
-            <Settings className="w-5 h-5 group-hover:scale-125 group-hover:text-blue-400 transition-all duration-300" />
-          </div>
-          <div className="flex-1">
-            <h1 className="text-lg font-semibold">Pepanthan</h1>
-            <Link
-              href="/"
+              href="/manage/tentang/majelis"
               className="text-base group-hover:text-blue-400 transition-all duration-300 italic"
             >
               manage

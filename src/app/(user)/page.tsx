@@ -25,7 +25,7 @@ const info = [
   {
     title: "Pendeta Aktif",
     description: "1",
-    link: "",
+    link: "/tentang/pendeta",
   },
 ];
 
@@ -87,14 +87,17 @@ export default function Home() {
                 key={info.title}
                 className="text-left md:flex md:items-start lg:flex lg:justify-center"
               >
-                <Link href={info.link}>
-                  <div className="relative bg-black/50 rounded-md">
+                <Link
+                  href={info.link}
+                  className="hover:scale-105 transition-all duration-300"
+                >
+                  <div className="relative rounded-md">
                     <Image
-                      src="/assets/img1.webp"
+                      src="/assets/img1.png"
                       width={500}
                       height={500}
                       alt="empty shopping cart"
-                      className="object-cover rounded-md object-top h-60 w-full lg:w-48 backdrop-brightness-150 mix-blend-multiply"
+                      className="object-cover rounded-md object-top h-60 w-full lg:w-48"
                     />
                     <div className="absolute bottom-4 left-4">
                       <h1 className="text-base font-medium text-white">
@@ -110,7 +113,7 @@ export default function Home() {
         </MaxWidthWrapper>
       </section>
 
-      <section className="border-t border-gray-200 bg-slate-50 mb-10 lg:mb-24">
+      {/* <section className="border-t border-gray-200 bg-slate-50 mb-10 lg:mb-24">
         <MaxWidthWrapper className="py-10">
           <div className="flex flex-col items-start md:flex-row md:items-center md:justify-center md:gap-x-5">
             <div className="flex-1">
@@ -140,9 +143,12 @@ export default function Home() {
             </div>
           </div>
         </MaxWidthWrapper>
-      </section>
+      </section> */}
 
-      <section className="mb-10 lg:mb-24" id="berita_terbaru">
+      <section
+        className="border-t border-gray-200 bg-slate-50 mb-10 lg:mb-24"
+        id="berita_terbaru"
+      >
         <MaxWidthWrapper className="py-20">
           <div className="flex flex-col items-start gap-10 md:flex-row md:items-center">
             <div className="">
@@ -157,7 +163,6 @@ export default function Home() {
               <Link
                 href="/berita"
                 className={buttonVariants({
-                  variant: "secondary",
                   size: "sm",
                 })}
               >
@@ -245,7 +250,7 @@ export default function Home() {
         </MaxWidthWrapper>
       </section>
 
-      <section className="border-t border-gray-200 bg-slate-50 mb-10 lg:mb-24">
+      {/* <section className="border-t border-gray-200 bg-slate-50 mb-10 lg:mb-24">
         <MaxWidthWrapper className="py-10">
           <div className="text-center">
             <h1 className="text-2xl font-semibold mb-1">Bahan Materi</h1>
@@ -278,7 +283,7 @@ export default function Home() {
             ))}
           </div>
         </MaxWidthWrapper>
-      </section>
+      </section> */}
     </>
   );
 }
