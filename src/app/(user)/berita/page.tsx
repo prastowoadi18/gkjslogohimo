@@ -28,7 +28,7 @@ const BeritaPage = () => {
             >
               <Image
                 className="w-full"
-                src="/assets/img2.jpg"
+                src="/assets/img2.webp"
                 alt="Sunset in the mountains"
                 width={500}
                 height={500}

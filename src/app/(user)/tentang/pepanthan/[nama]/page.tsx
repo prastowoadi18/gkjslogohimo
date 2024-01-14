@@ -57,7 +57,7 @@ const PepanthanDetailPage = ({ params }: { params: { nama: string } }) => {
               <div className="bg-black/20">
                 <Image
                   className="w-full mix-blend-multiply"
-                  src="/assets/img2.jpg"
+                  src="/assets/img2.webp"
                   alt="Sunset in the mountains"
                   width={500}
                   height={500}

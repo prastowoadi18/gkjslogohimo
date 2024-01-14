@@ -1,9 +1,10 @@
 "use client";
 
+import Image from "@/components/Image";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { Button } from "@/components/ui/button";
 import { useCardModal } from "@/hooks/use-card-modal";
-import Image from "next/image";
+
 import Link from "next/link";
 
 const PendetaPage = () => {
@@ -24,17 +25,17 @@ const PendetaPage = () => {
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ab?
       </p>
       <div className="pt-10 pb-20">
-        <div className="flex items-center justify-center">
+        <div className="flex flex-col md:flex-row items-center justify-center">
           <Image
-            className="rounded-md h-96 w-full hidden md:block flex-1"
+            className="rounded-md h-[27rem] w-full"
             src="/assets/img1.webp"
             alt="Sunset in the mountains"
             width={500}
             height={500}
           />
-          <div className=" md:px-5 lg:px-16">
-            <h1 className="text-2xl font-semibold mb-5">Pdt. Wuri Ajeng</h1>
-            <p className="text-muted-foreground text-base line-clamp-7">
+          <div className="mt-10 md:px-5 lg:px-16 flex-1">
+            <h1 className="text-2xl font-semibold mb-3">Pdt. Wuri Ajeng</h1>
+            <p className="text-muted-foreground text-base line-clamp-7 md:line-clamp-5 text-justify px-5 md:px-0">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores
               ad vero magnam voluptatum voluptate est illum. Facere numquam
               rerum eaque reprehenderit consequuntur maiores voluptatibus
