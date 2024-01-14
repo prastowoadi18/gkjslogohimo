@@ -7,12 +7,12 @@ const TentangSejarahPage = () => {
   return (
     <MaxWidthWrapper>
       <div className="py-5">
-        <div className="relative rounded-md">
+        <div className="relative rounded-md bg-black/20">
           <Image
             className="rounded-md object-cover md:object-[center_-2rem] lg:object-[center_-7rem] w-full h-52 md:h-60 lg:h-72"
             src="/assets/img3.webp"
             alt="Sunset in the mountains"
-            width={1200}
+            width={800}
             height={700}
           />
 
