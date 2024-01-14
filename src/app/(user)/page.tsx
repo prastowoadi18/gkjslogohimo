@@ -2,8 +2,6 @@ import Image from "@/components/Image";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { buttonVariants } from "@/components/ui/button";
 
-import { Church } from "lucide-react";
-
 import Link from "next/link";
 
 const info = [
@@ -93,7 +91,7 @@ export default function Home() {
                 >
                   <div className="relative rounded-md">
                     <Image
-                      src="/assets/img1.png"
+                      src="/assets/img1.webp"
                       width={500}
                       height={500}
                       alt="empty shopping cart"
@@ -180,7 +178,7 @@ export default function Home() {
                 <div className="bg-black/20">
                   <Image
                     className="w-full mix-blend-multiply"
-                    src="/assets/img2.jpg"
+                    src="/assets/img2.webp"
                     alt="Sunset in the mountains"
                     width={500}
                     height={500}

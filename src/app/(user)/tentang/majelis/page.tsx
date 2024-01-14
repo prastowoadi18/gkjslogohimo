@@ -28,7 +28,7 @@ const TentangMajelistPage = () => {
             <div className="relative mx-auto rounded-full">
               <Image
                 className="rounded-full object-cover p-1 w-20 h-20"
-                src="/assets/img4.jpg"
+                src="/assets/img4.webp.jpg"
                 alt="Sunset in the mountains"
                 width={500}
                 height={500}

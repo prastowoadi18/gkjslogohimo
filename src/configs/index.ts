@@ -6,17 +6,17 @@ export const PRODUCT_CATEGORIES = [
       {
         name: "Sejarah Lengkap",
         href: `/tentang/sejarah`,
-        imageSrc: "/assets/img2.jpg",
+        imageSrc: "/assets/img2.webp",
       },
       {
         name: "Majelis",
         href: `/tentang/majelis`,
-        imageSrc: "/assets/img2.jpg",
+        imageSrc: "/assets/img2.webp",
       },
       {
         name: "Pepanthan",
         href: `/tentang/pepanthan`,
-        imageSrc: "/assets/img2.jpg",
+        imageSrc: "/assets/img2.webp",
       },
     ],
   },
@@ -27,17 +27,17 @@ export const PRODUCT_CATEGORIES = [
       {
         name: "Berita 1",
         href: "/berita/1",
-        imageSrc: "/assets/img2.jpg",
+        imageSrc: "/assets/img2.webp",
       },
       {
         name: "Berita 2",
         href: "/berita/2",
-        imageSrc: "/assets/img2.jpg",
+        imageSrc: "/assets/img2.webp",
       },
       {
         name: "Berita 3",
         href: "/berita/3",
-        imageSrc: "/assets/img2.jpg",
+        imageSrc: "/assets/img2.webp",
       },
     ],
   },
@@ -48,17 +48,17 @@ export const PRODUCT_CATEGORIES = [
       {
         name: "Manage Tentang",
         href: "/manage/tentang",
-        imageSrc: "/assets/img2.jpg",
-      },
-      {
-        name: "Manage Materi",
-        href: "/manage/materi",
-        imageSrc: "/assets/img2.jpg",
+        imageSrc: "/assets/img2.webp",
       },
       {
         name: "Manage Berita",
         href: "/manage/berita",
-        imageSrc: "/assets/img2.jpg",
+        imageSrc: "/assets/img2.webp",
+      },
+      {
+        name: "Manage Menu",
+        href: "/manage/menu",
+        imageSrc: "/assets/img2.webp",
       },
     ],
   },
@@ -69,17 +69,17 @@ export const PRODUCT_CATEGORIES = [
   //     {
   //       name: "Khotbah",
   //       href: `/materi/khotbah`,
-  //       imageSrc: "/assets/img2.jpg",
+  //       imageSrc: "/assets/img2.webp",
   //     },
   //     {
   //       name: "Renungan",
   //       href: "/materi/renungan",
-  //       imageSrc: "/assets/img2.jpg",
+  //       imageSrc: "/assets/img2.webp",
   //     },
   //     {
   //       name: "Kurikulum",
   //       href: "/materi/kurikulum",
-  //       imageSrc: "/assets/img2.jpg",
+  //       imageSrc: "/assets/img2.webp",
   //     },
   //   ],
   // },
