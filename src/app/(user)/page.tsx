@@ -8,6 +8,8 @@ import {
   TentangGereja,
 } from "@/app/(user)/_components";
 
+import prisma from "@/lib/prisma";
+
 export function generateMetadata(): Metadata {
   return {
     title: "Home",
@@ -17,13 +19,18 @@ export function generateMetadata(): Metadata {
   };
 }
 
-export default function Page() {
+export default async function Page() {
+  const berita = await prisma.berita.findMany({
+    take: 3,
+    orderBy: { createdAt: "desc" },
+  });
+
   return (
     <div className="">
       <Hero />
       <Info />
       <JadwalIbadah />
-      <BeritaTerbaru />
+      <BeritaTerbaru berita={berita} />
       <TentangGereja />
     </div>
   );

@@ -7,9 +7,13 @@ import { buttonVariants } from "@/components/ui/button";
 
 import { relativeDate } from "@/lib/utils";
 
-import { DUMMY_BERITA } from "@/configs";
+import { Berita } from "@prisma/client";
 
-export default function BeritaTerbaru() {
+interface BeritaTerbaruProps {
+  berita: Berita[];
+}
+
+export default function BeritaTerbaru({ berita }: BeritaTerbaruProps) {
   const renderMain = useMemo(() => {
     return (
       <section
@@ -39,14 +43,14 @@ export default function BeritaTerbaru() {
           </div>
 
           <div className="grid grid-cols-1 gap-10 pt-20 md:grid-cols-2 lg:grid-cols-3">
-            {DUMMY_BERITA.map((item) => (
+            {berita.map((item) => (
               <div
                 className="max-w-sm overflow-hidden rounded shadow-lg"
                 key={item.id}
               >
                 <Image
                   className="w-full"
-                  src={item.imgUrl}
+                  src={item.imageUrl!}
                   alt={`img-${item.title}`}
                   width={500}
                   height={500}
@@ -56,7 +60,7 @@ export default function BeritaTerbaru() {
                   <div className="text-2xl font-bold">{item.title}</div>
                   <div className="mb-4">
                     <p className="text-sm text-muted-foreground">
-                      dibuat {relativeDate(new Date(item.created_date))}
+                      dibuat {relativeDate(new Date(item.createdAt))}
                     </p>
                   </div>
                   <p className="line-clamp-4 text-base text-muted-foreground">
@@ -77,6 +81,6 @@ export default function BeritaTerbaru() {
         </MaxWidthWrapper>
       </section>
     );
-  }, []);
+  }, [berita]);
   return renderMain;
 }

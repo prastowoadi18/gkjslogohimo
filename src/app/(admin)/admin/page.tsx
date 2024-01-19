@@ -19,7 +19,7 @@ export default function Page() {
           at.
         </p>
         <div className="mt-6 flex flex-col gap-4 sm:flex-row">
-          <Link href="/tentang/sejarah" className={buttonVariants()}>
+          <Link href="/admin/manage" className={buttonVariants()}>
             Manage Content
           </Link>
           <div

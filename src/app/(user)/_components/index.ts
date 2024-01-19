@@ -15,6 +15,9 @@ import DetailGereja from "./tentang/gereja/DetailGereja";
 
 import ContentJemaat from "./tentang/jemaat/Content";
 
+import ContentBerita from "./berita/Content";
+import DetailBerita from "./berita/DetailBerita";
+
 export {
   Hero,
   Info,
@@ -28,4 +31,6 @@ export {
   ContentGereja,
   DetailGereja,
   ContentJemaat,
+  ContentBerita,
+  DetailBerita,
 };
