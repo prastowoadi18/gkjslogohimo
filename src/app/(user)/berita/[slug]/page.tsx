@@ -53,7 +53,7 @@ export async function generateMetadata({
     title: berita.title,
     description: berita.description,
     openGraph: {
-      images: `${process.env.DOMAIN}${berita.imageUrl}`,
+      images: berita.imageUrl!,
       url: `${process.env.DOMAIN}/berita/${slug}`,
       siteName: METADATA.openGraph.siteName,
       locale: METADATA.openGraph.locale,
