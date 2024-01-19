@@ -1,66 +1,42 @@
-import Image from "@/components/Image";
+import { Metadata } from "next";
+
+import prisma from "@/lib/prisma";
+
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
+import { TitleSection } from "@/components/TitleSection";
+import { ContentBerita } from "../_components";
 
-import Link from "next/link";
+const link = [
+  {
+    title: "Beranda",
+    href: "/",
+  },
+];
 
-const BeritaPage = () => {
-  return (
-    <MaxWidthWrapper className="py-5">
-      <div className="hidden lg:flex space-x-2 text-muted-foreground text-base">
-        <Link href="/" className="hover:text-blue-500">
-          Beranda
-        </Link>
-        <span className="">/</span>
-        <p className="font-semibold">Berita GKJ Slogohimo</p>
-      </div>
-      <h1 className="mt-2 lg:mt-10 text-2xl lg:text-xl font-semibold">
-        Berita GKJ Slogohimo
-      </h1>
-      <p className="text-muted-foreground">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ab?
-      </p>
-      <div className="flex justify-center">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8 lg:gap-14 pt-10 lg:pt-16 pb-20">
-          {Array.from({ length: 3 }).map((e: any, idx) => (
-            <div
-              className="max-w-sm rounded overflow-hidden shadow-lg"
-              key={idx}
-            >
-              <Image
-                className="w-full"
-                src="/assets/img2.webp"
-                alt="Sunset in the mountains"
-                width={500}
-                height={500}
-              />
-
-              <div className="px-6 py-4">
-                <div className="font-bold text-lg">{`Berita ${idx + 1}`}</div>
-                <div className="mb-4">
-                  <p className="text-sm text-muted-foreground">
-                    Sabtu, 14 Oktober 2023
-                  </p>
-                </div>
-                <p className="text-muted-foreground text-base line-clamp-4 mt-3">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Voluptatibus quia, nulla! Maiores et perferendis eaque,
-                  exercitationem praesentium nihil.
-                </p>
-              </div>
-              <div className="px-6 pt-2 pb-5">
-                <Link
-                  href={`/berita/1`}
-                  className="mt-5 text-sm text-blue-500 cursor-pointer font-semibold hover:text-blue-400"
-                >
-                  baca lebih lanjut...
-                </Link>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </MaxWidthWrapper>
-  );
+export const metadata: Metadata = {
+  title: "Berita",
+  description:
+    "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ab?",
+  keywords: "Slogohimo, Jatisrono, Gereja, Jatiroto, Joho, Kristen, Jemaat",
+  alternates: {
+    canonical: `${process.env.DOMAIN}/berita`,
+  },
 };
 
-export default BeritaPage;
+export default async function Page() {
+  const berita = await prisma.berita.findMany({
+    orderBy: { createdAt: "desc" },
+  });
+
+  return (
+    <MaxWidthWrapper className="py-5">
+      <TitleSection
+        current_page="Berita"
+        title="Berita GKJ Slogohimo"
+        desc="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ab?"
+        link={link}
+      />
+      <ContentBerita berita={berita} />
+    </MaxWidthWrapper>
+  );
+}

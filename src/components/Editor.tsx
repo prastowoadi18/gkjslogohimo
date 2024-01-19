@@ -15,7 +15,7 @@ export const Editor = ({ onChange, value }: EditorProps) => {
       dynamic(() => import("react-quill"), {
         ssr: false,
       }),
-    []
+    [],
   );
   return (
     <div className="bg-white">

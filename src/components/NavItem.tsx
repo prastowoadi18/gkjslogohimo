@@ -27,7 +27,7 @@ const NavItem = ({ category, handleOpen, isAnyOpen, isOpen }: NavItemProps) => {
         >
           {category.label}
           <ChevronDown
-            className={cn("h-4 w-4 transition-all text-muted-foreground", {
+            className={cn("h-4 w-4 text-muted-foreground transition-all", {
               "-rotate-180": isOpen,
             })}
           />
@@ -37,36 +37,36 @@ const NavItem = ({ category, handleOpen, isAnyOpen, isOpen }: NavItemProps) => {
         <div
           className={cn(
             "absolute inset-x-0 top-full text-sm text-muted-foreground",
-            { "animate-in fade-in-10 slide-in-from-top-5": !isAnyOpen }
+            { "animate-in fade-in-10 slide-in-from-top-5": !isAnyOpen },
           )}
         >
           <div
-            className="absolute inset-0 bg-white shadow top-1/2"
+            className="absolute inset-0 top-1/2 bg-white shadow"
             aria-hidden="true"
           />
           <div className="relative bg-white">
-            <div className="px-8 mx-auto max-w-7xl">
-              <div className="grid grid-cols-4 py-16 gap-x-8 gap-y-10">
-                <div className="grid grid-cols-3 col-span-4 col-start-1 gap-x-8">
+            <div className="mx-auto max-w-7xl px-8">
+              <div className="grid grid-cols-4 gap-x-8 gap-y-10 py-16">
+                <div className="col-span-4 col-start-1 grid grid-cols-3 gap-x-8">
                   {category.featured.map((item) => (
                     <div
                       key={item.name}
-                      className="relative text-base group sm:text-sm"
+                      className="group relative text-base sm:text-sm"
                     >
-                      <div className="relative overflow-hidden bg-gray-100 rounded-lg aspect-video group-hover:opacity-75">
+                      <div className="relative aspect-video overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75">
                         <Image
                           src={item.imageSrc}
                           alt="product category image"
                           width={500}
                           height={500}
-                          className="object-cover object-center aspect-video rounded-lg"
+                          className="aspect-video rounded-lg object-cover object-center"
                           rounded="rounded-lg"
                         />
                       </div>
 
                       <Link
                         href={item.href}
-                        className="block mt-6 font-medium text-gray-900"
+                        className="mt-6 block font-medium text-gray-900"
                         onClick={handleOpen}
                       >
                         {item.name}
