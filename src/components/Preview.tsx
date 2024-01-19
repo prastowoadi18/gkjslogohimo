@@ -14,7 +14,7 @@ export const Preview = ({ value }: PreviewProps) => {
       dynamic(() => import("react-quill"), {
         ssr: false,
       }),
-    []
+    [],
   );
   return <ReactQuill theme="bubble" value={value} readOnly />;
 };
