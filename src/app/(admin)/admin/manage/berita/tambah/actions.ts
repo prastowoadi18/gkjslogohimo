@@ -7,6 +7,7 @@ import prisma from "@/lib/prisma";
 import { redirect } from "next/navigation";
 import { UTApi } from "uploadthing/server";
 import { NextResponse } from "next/server";
+import { revalidatePath } from "next/cache";
 
 export async function createBerita(formData: FormData) {
   const values = Object.fromEntries(formData.entries());
@@ -23,6 +24,7 @@ export async function createBerita(formData: FormData) {
     },
   });
 
+  revalidatePath("/", "layout");
   redirect("/admin/manage/berita/tambah");
 }
 
