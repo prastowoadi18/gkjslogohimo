@@ -1,22 +1,22 @@
 "use client";
 
-import { PRODUCT_CATEGORIES } from "@/configs";
+import { NAV_MENU } from "@/configs";
 import { Button } from "./ui/button";
 import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import Image from "./Image";
 
-type Category = (typeof PRODUCT_CATEGORIES)[number];
+type NavMenu = (typeof NAV_MENU)[number];
 
 interface NavItemProps {
-  category: Category;
+  navMenu: NavMenu;
   handleOpen: () => void;
   isOpen: boolean;
   isAnyOpen: boolean;
 }
 
-const NavItem = ({ category, handleOpen, isAnyOpen, isOpen }: NavItemProps) => {
+const NavItem = ({ navMenu, handleOpen, isAnyOpen, isOpen }: NavItemProps) => {
   return (
     <div className="flex">
       <div className="relative flex items-center">
@@ -25,7 +25,7 @@ const NavItem = ({ category, handleOpen, isAnyOpen, isOpen }: NavItemProps) => {
           onClick={handleOpen}
           variant={isOpen ? "secondary" : "ghost"}
         >
-          {category.label}
+          {navMenu.label}
           <ChevronDown
             className={cn("h-4 w-4 text-muted-foreground transition-all", {
               "-rotate-180": isOpen,
@@ -48,7 +48,7 @@ const NavItem = ({ category, handleOpen, isAnyOpen, isOpen }: NavItemProps) => {
             <div className="mx-auto max-w-7xl px-8">
               <div className="grid grid-cols-4 gap-x-8 gap-y-10 py-16">
                 <div className="col-span-4 col-start-1 grid grid-cols-3 gap-x-8">
-                  {category.featured.map((item) => (
+                  {navMenu.featured.map((item) => (
                     <div
                       key={item.name}
                       className="group relative text-base sm:text-sm"
@@ -69,7 +69,7 @@ const NavItem = ({ category, handleOpen, isAnyOpen, isOpen }: NavItemProps) => {
                         className="mt-6 block font-medium text-gray-900"
                         onClick={handleOpen}
                       >
-                        {item.name}
+                        <p className="line-clamp-1"> {item.name}</p>
                       </Link>
                       <p className="mt-1" aria-hidden="true">
                         Lihat detail

@@ -28,7 +28,7 @@ export const columns: ColumnDef<Berita>[] = [
       );
     },
     cell: ({ row }) => {
-      return <p>{row.getValue("title")}</p>;
+      return <p className="line-clamp-2">{row.getValue("title")}</p>;
     },
   },
   {
@@ -45,7 +45,12 @@ export const columns: ColumnDef<Berita>[] = [
       );
     },
     cell: ({ row }) => {
-      return <p className="line-clamp-3">{row.getValue("description")}</p>;
+      return (
+        <div
+          className="parse_style line-clamp-3"
+          dangerouslySetInnerHTML={{ __html: row.getValue("description") }}
+        />
+      );
     },
   },
   {

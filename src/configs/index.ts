@@ -1,4 +1,4 @@
-export const PRODUCT_CATEGORIES = [
+export const NAV_MENU = [
   {
     label: "Tentang",
     value: "tentang" as const,
@@ -56,7 +56,7 @@ export const METADATA = {
     url: process.env.DOMAIN,
     siteName: "GKJ Slogohimo",
     locale: "id-ID",
-    img: "https://utfs.io/f/fc5d9226-e5b6-42f8-904e-cf93d8f07419-1xcy8.webp",
+    img: "https://utfs.io/f/ff8d1b92-19f2-4403-b3e7-43fb7ee892bc-cfbm5x.png",
   },
   exTitle: "| GKJ Slogohimo",
   profile: "https://utfs.io/f/fc5d9226-e5b6-42f8-904e-cf93d8f07419-1xcy8.webp",

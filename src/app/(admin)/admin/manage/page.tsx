@@ -17,6 +17,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${process.env.DOMAIN}/admin/manage`,
   },
+  robots: {
+    index: false,
+    follow: true,
+  },
 };
 
 export default function Page() {
