@@ -66,7 +66,7 @@ export function DataTable<TData, TValue>({
           }
           className="max-w-xs md:max-w-sm"
         />
-        <Link href="/manage/berita/tambah" className="md:ml-auto">
+        <Link href="/admin/manage/berita/tambah" className="md:ml-auto">
           <Button>
             <PlusCircle className="mr-2 h-4 w-4" />
             Tambah Berita

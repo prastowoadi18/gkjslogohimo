@@ -7,9 +7,32 @@ import NavItems from "./NavItems";
 
 import Image from "./Image";
 import { Facebook, Instagram, Youtube } from "lucide-react";
-import { PRODUCT_CATEGORIES } from "@/configs";
+import { NAV_MENU } from "@/configs";
 
-const Navbar = () => {
+import prisma from "@/lib/prisma";
+
+export default async function Navbar() {
+  const berita = await prisma.berita.findMany({
+    orderBy: { createdAt: "desc" },
+    take: 3,
+  });
+
+  const newNavMenu = NAV_MENU.map((e) => {
+    return {
+      ...e,
+      featured:
+        e.value === "berita"
+          ? berita.map((e) => {
+              return {
+                name: e.title,
+                href: `/berita/${e.slug}`,
+                imageSrc: e.imageUrl,
+              };
+            })
+          : e.featured,
+    };
+  });
+
   return (
     <div className="sticky inset-x-0 top-0 z-50 h-16 bg-white">
       <header className="relative bg-white">
@@ -31,7 +54,7 @@ const Navbar = () => {
                 </Link>
               </div>
               <div className="z-50 hidden lg:ml-8 lg:block lg:self-stretch">
-                <NavItems data={PRODUCT_CATEGORIES} />
+                <NavItems data={newNavMenu} />
               </div>
               <div className="ml-auto flex items-center">
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
@@ -78,6 +101,4 @@ const Navbar = () => {
       </header>
     </div>
   );
-};
-
-export default Navbar;
+}

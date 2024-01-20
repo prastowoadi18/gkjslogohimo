@@ -1,7 +1,19 @@
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { buttonVariants } from "@/components/ui/button";
 import { UserButton } from "@clerk/nextjs";
+import { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Manage",
+  alternates: {
+    canonical: `${process.env.DOMAIN}/admin/manage`,
+  },
+  robots: {
+    index: false,
+    follow: true,
+  },
+};
 
 export default function Page() {
   return (

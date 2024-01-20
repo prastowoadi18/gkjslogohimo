@@ -32,7 +32,7 @@ const NavItems = ({ data }: IProps) => {
 
   return (
     <div className="flex h-full gap-4" ref={navRef}>
-      {data.map((category: any, i: number) => {
+      {data.map((item: any, i: number) => {
         const handleOpen = () => {
           if (activeIndex === i) {
             setActiveIndex(null);
@@ -45,10 +45,10 @@ const NavItems = ({ data }: IProps) => {
 
         return (
           <NavItem
-            category={category}
+            navMenu={item}
             handleOpen={handleOpen}
             isOpen={isOpen}
-            key={category.value}
+            key={item.value}
             isAnyOpen={isAnyOpen}
           />
         );
