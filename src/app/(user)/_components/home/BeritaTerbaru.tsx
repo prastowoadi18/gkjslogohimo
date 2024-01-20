@@ -6,7 +6,7 @@ import Image from "@/components/Image";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { buttonVariants } from "@/components/ui/button";
 
-import { relativeDate } from "@/lib/utils";
+// import { relativeDate } from "@/lib/utils";
 
 import { Berita } from "@prisma/client";
 
@@ -60,11 +60,11 @@ export default function BeritaTerbaru({ berita }: BeritaTerbaruProps) {
                 <h3 className="line-clamp-1 text-lg font-bold md:text-xl">
                   {item.title}
                 </h3>
-                <div className="mb-4">
+                {/* <div className="mb-4">
                   <p className="text-sm text-muted-foreground">
                     dibuat {relativeDate(new Date(item.createdAt))}
                   </p>
-                </div>
+                </div> */}
                 <div className="line-clamp-4 text-base text-muted-foreground">
                   <div
                     dangerouslySetInnerHTML={{
