@@ -93,10 +93,16 @@ const Footer = () => {
                       Sejarah Lengkap
                     </Link>
                     <Link
-                      href="/tentang/pepanthan"
+                      href="/tentang/gereja"
+                      className="mb-3 text-base text-muted-foreground transition-all duration-300 hover:text-blue-500"
+                    >
+                      Gereja
+                    </Link>
+                    <Link
+                      href="/tentang/pendeta"
                       className="text-base text-muted-foreground transition-all duration-300 hover:text-blue-500"
                     >
-                      Pepantahan
+                      Profile Pendeta
                     </Link>
                   </div>
                 </div>

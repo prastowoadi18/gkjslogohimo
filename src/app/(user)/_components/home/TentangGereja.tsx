@@ -2,8 +2,6 @@
 
 import Link from "next/link";
 
-import { motion } from "framer-motion";
-
 import Image from "@/components/Image";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { buttonVariants } from "@/components/ui/button";
@@ -12,21 +10,7 @@ import { TENTANG_GEREJA } from "@/configs";
 
 export default function TentangGereja() {
   return (
-    <motion.section
-      initial={{
-        opacity: 0,
-      }}
-      whileInView={{
-        opacity: 1,
-      }}
-      transition={{
-        duration: 1,
-      }}
-      viewport={{
-        once: true,
-      }}
-      className="mb-10 lg:mb-24"
-    >
+    <section className="mb-10 lg:mb-24">
       <MaxWidthWrapper className="py-10">
         <div className="flex items-center justify-center">
           <Image
@@ -52,6 +36,6 @@ export default function TentangGereja() {
           </div>
         </div>
       </MaxWidthWrapper>
-    </motion.section>
+    </section>
   );
 }

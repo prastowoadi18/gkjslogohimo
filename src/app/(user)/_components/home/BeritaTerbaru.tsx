@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
 
 import Image from "@/components/Image";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
@@ -43,21 +42,7 @@ export default function BeritaTerbaru({ berita }: BeritaTerbaruProps) {
           </div>
         </div>
 
-        <motion.div
-          initial={{
-            scale: 0,
-          }}
-          whileInView={{
-            scale: 1,
-          }}
-          transition={{
-            duration: 1,
-          }}
-          viewport={{
-            once: true,
-          }}
-          className="grid grid-cols-1 gap-10 pt-20 md:grid-cols-2 lg:grid-cols-3"
-        >
+        <div className="grid grid-cols-1 gap-10 pt-20 md:grid-cols-2 lg:grid-cols-3">
           {berita.map((item) => (
             <div
               className="max-w-sm overflow-hidden rounded shadow-lg"
@@ -98,7 +83,7 @@ export default function BeritaTerbaru({ berita }: BeritaTerbaruProps) {
               </div>
             </div>
           ))}
-        </motion.div>
+        </div>
       </MaxWidthWrapper>
     </section>
   );
