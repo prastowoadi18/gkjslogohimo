@@ -2,11 +2,13 @@
 
 import Link from "next/link";
 
+import { motion } from "framer-motion";
+
 import Image from "@/components/Image";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { buttonVariants } from "@/components/ui/button";
 
-// import { relativeDate } from "@/lib/utils";
+import { relativeDate } from "@/lib/utils";
 
 import { Berita } from "@prisma/client";
 
@@ -42,10 +44,24 @@ export default function BeritaTerbaru({ berita }: BeritaTerbaruProps) {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 gap-10 pt-20 md:grid-cols-2 lg:grid-cols-3">
+        <motion.div
+          initial={{
+            scale: 0,
+          }}
+          whileInView={{
+            scale: 1,
+          }}
+          transition={{
+            duration: 1,
+          }}
+          viewport={{
+            once: true,
+          }}
+          className="grid grid-cols-1 gap-10 pt-20 md:grid-cols-2 lg:grid-cols-3"
+        >
           {berita.map((item) => (
             <div
-              className="max-w-sm overflow-hidden rounded shadow-lg"
+              className="max-w-sm overflow-hidden rounded bg-white shadow-lg"
               key={item.id}
             >
               <Image
@@ -60,11 +76,11 @@ export default function BeritaTerbaru({ berita }: BeritaTerbaruProps) {
                 <h3 className="line-clamp-1 text-lg font-bold md:text-xl">
                   {item.title}
                 </h3>
-                {/* <div className="mb-4">
+                <div className="mb-4">
                   <p className="text-sm text-muted-foreground">
                     dibuat {relativeDate(new Date(item.createdAt))}
                   </p>
-                </div> */}
+                </div>
                 <div className="line-clamp-4 text-base text-muted-foreground">
                   <div
                     dangerouslySetInnerHTML={{
@@ -83,7 +99,7 @@ export default function BeritaTerbaru({ berita }: BeritaTerbaruProps) {
               </div>
             </div>
           ))}
-        </div>
+        </motion.div>
       </MaxWidthWrapper>
     </section>
   );

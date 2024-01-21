@@ -21,13 +21,24 @@ import Image from "@/components/Image";
 import { Label } from "@/components/ui/label";
 import LoadingButton from "@/components/LoadingButton";
 
-import { CreateBeritaValues, createBeritaSchema } from "@/lib/validation";
+import { EditBeritaValues, editBeritaSchema } from "@/lib/validation";
 
-import { createBerita, deleteImageBerita } from "../../actions";
+import { editBerita, deleteImageBerita } from "../../actions";
 
-export default function FormAdd() {
-  const form = useForm<CreateBeritaValues>({
-    resolver: zodResolver(createBeritaSchema),
+import { Berita } from "@prisma/client";
+
+interface FormEditProps {
+  berita: Berita;
+}
+export default function FormEdit({ berita }: FormEditProps) {
+  const form = useForm<EditBeritaValues>({
+    resolver: zodResolver(editBeritaSchema),
+    defaultValues: {
+      id: berita.id.toString(),
+      title: berita.title,
+      description: berita.description!,
+      imageUrl: berita.imageUrl!,
+    },
   });
 
   const {
@@ -39,7 +50,7 @@ export default function FormAdd() {
     formState: { isSubmitting },
   } = form;
 
-  async function onSubmit(values: CreateBeritaValues) {
+  async function onSubmit(values: EditBeritaValues) {
     const formData = new FormData();
     Object.entries(values).forEach(([key, value]) => {
       if (value) {
@@ -48,8 +59,8 @@ export default function FormAdd() {
     });
 
     try {
-      await createBerita(formData);
-      toast.success("Berhasil tambah berita");
+      await editBerita(formData);
+      toast.success("Berhasil edit berita");
     } catch (error) {
       alert("Something went wrong, please try again.");
     }

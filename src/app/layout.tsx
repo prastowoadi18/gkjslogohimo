@@ -2,7 +2,7 @@ import { Inter } from "next/font/google";
 import type { Metadata } from "next";
 
 import { Toaster } from "sonner";
-// import NextTopLoader from "nextjs-toploader";
+import NextTopLoader from "nextjs-toploader";
 
 import { cn } from "@/lib/utils";
 
@@ -53,7 +53,7 @@ export default function RootLayout({
       <body
         className={cn("relative h-full font-sans antialiased", inter.className)}
       >
-        {/* <NextTopLoader
+        <NextTopLoader
           color="#60a5fa"
           initialPosition={0.08}
           crawlSpeed={200}
@@ -63,7 +63,7 @@ export default function RootLayout({
           easing="ease"
           speed={200}
           shadow="0 0 10px #3b82f6,0 0 5px #60a5fa"
-        /> */}
+        />
         <main className="">
           <Navbar />
           {children}

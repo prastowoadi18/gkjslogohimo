@@ -9,7 +9,10 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function relativeDate(from: Date) {
-  return formatDistanceToNowStrict(from, { addSuffix: true, locale: id });
+  return formatDistanceToNowStrict(new Date(from), {
+    addSuffix: true,
+    locale: id,
+  });
 }
 
 export function toSlug(str: string) {

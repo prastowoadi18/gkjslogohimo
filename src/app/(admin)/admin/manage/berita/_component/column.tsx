@@ -1,5 +1,12 @@
 "use client";
 
+import Link from "next/link";
+import { ColumnDef } from "@tanstack/react-table";
+import { ArrowUpDown, MoreHorizontal, Pencil, Trash } from "lucide-react";
+import { toast } from "sonner";
+
+import { Berita } from "@prisma/client";
+
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -7,11 +14,8 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Berita } from "@prisma/client";
 
-import { ColumnDef } from "@tanstack/react-table";
-import { ArrowUpDown, MoreHorizontal, Pencil } from "lucide-react";
-import Link from "next/link";
+import { deleteBerita } from "../actions";
 
 export const columns: ColumnDef<Berita>[] = [
   {
@@ -56,7 +60,16 @@ export const columns: ColumnDef<Berita>[] = [
   {
     id: "actions",
     cell: ({ row }) => {
-      const { slug } = row.original;
+      const { id, slug } = row.original;
+
+      async function onDelete() {
+        try {
+          await deleteBerita(id);
+          toast.success("Berhasil delete berita");
+        } catch (error) {
+          alert("Something went wrong, please try again.");
+        }
+      }
 
       return (
         <DropdownMenu>
@@ -67,12 +80,21 @@ export const columns: ColumnDef<Berita>[] = [
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
-            <Link href={`/manage/berita/${slug}`}>
-              <DropdownMenuItem>
+            <Link href={`/admin/manage/berita/edit/${slug}`}>
+              <DropdownMenuItem className="cursor-pointer">
                 <Pencil className="mr-2 h-4 w-4" />
                 Edit
               </DropdownMenuItem>
             </Link>
+            <DropdownMenuItem>
+              <button className="flex items-center" onClick={onDelete}>
+                <Trash className="mr-2 h-4 w-4" />
+                Delete
+              </button>
+              {/* <Button variant="outline" onClick={onDelete}>
+                Delete
+              </Button> */}
+            </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       );
