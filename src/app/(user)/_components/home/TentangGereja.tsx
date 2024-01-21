@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 
+import { motion } from "framer-motion";
+
 import Image from "@/components/Image";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { buttonVariants } from "@/components/ui/button";
@@ -12,7 +14,21 @@ export default function TentangGereja() {
   return (
     <section className="mb-10 lg:mb-24">
       <MaxWidthWrapper className="py-10">
-        <div className="flex items-center justify-center">
+        <motion.div
+          initial={{
+            opacity: 0,
+          }}
+          whileInView={{
+            opacity: 1,
+          }}
+          transition={{
+            duration: 1,
+          }}
+          viewport={{
+            once: true,
+          }}
+          className="flex items-center justify-center"
+        >
           <Image
             className="hidden h-96 w-full rounded-md md:block"
             src={TENTANG_GEREJA.img_url}
@@ -34,7 +50,7 @@ export default function TentangGereja() {
               Selengkapnya
             </Link>
           </div>
-        </div>
+        </motion.div>
       </MaxWidthWrapper>
     </section>
   );

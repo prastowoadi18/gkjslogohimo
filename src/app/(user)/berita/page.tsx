@@ -13,6 +13,12 @@ const link = [
   },
 ];
 
+interface PageProps {
+  searchParams: {
+    page?: string;
+  };
+}
+
 export const metadata: Metadata = {
   title: "Berita",
   description:
@@ -23,11 +29,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function Page() {
-  const berita = await prisma.berita.findMany({
-    orderBy: { createdAt: "desc" },
-  });
-
+export default async function Page({ searchParams: { page } }: PageProps) {
   return (
     <MaxWidthWrapper className="py-5">
       <TitleSection
@@ -36,7 +38,7 @@ export default async function Page() {
         desc="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ab?"
         link={link}
       />
-      <ContentBerita berita={berita} />
+      <ContentBerita page={page ? parseInt(page) : undefined} />
     </MaxWidthWrapper>
   );
 }

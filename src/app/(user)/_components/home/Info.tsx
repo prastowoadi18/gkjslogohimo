@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 
+import { motion } from "framer-motion";
+
 import Image from "@/components/Image";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 
@@ -11,7 +13,18 @@ export default function Info() {
   return (
     <section className="mb-10 lg:mb-24">
       <MaxWidthWrapper className="py-10">
-        <div className="grid grid-cols-1 gap-3 gap-y-12 sm:gap-x-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-0">
+        <motion.div
+          initial={{
+            opacity: 0,
+          }}
+          whileInView={{
+            opacity: 1,
+          }}
+          transition={{
+            duration: 1,
+          }}
+          className="grid grid-cols-1 gap-3 gap-y-12 sm:gap-x-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-0"
+        >
           {TENTANG_GEREJA.info.map((info) => (
             <div
               key={info.title}
@@ -37,7 +50,7 @@ export default function Info() {
               </Link>
             </div>
           ))}
-        </div>
+        </motion.div>
       </MaxWidthWrapper>
     </section>
   );

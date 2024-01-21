@@ -9,3 +9,12 @@ export const createBeritaSchema = z.object({
 });
 
 export type CreateBeritaValues = z.infer<typeof createBeritaSchema>;
+
+export const editBeritaSchema = z.object({
+  id: z.string(),
+  title: requiredString.max(100),
+  description: z.string().max(5000).optional(),
+  imageUrl: z.string(),
+});
+
+export type EditBeritaValues = z.infer<typeof editBeritaSchema>;

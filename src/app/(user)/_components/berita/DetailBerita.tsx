@@ -27,16 +27,18 @@ export default function DetailBerita({ berita }: DetailBeritaProps) {
           Lihat Gambar
         </Link>
         <div
-          className="parse_style mt-5 text-justify text-base"
+          className="parse_style mt-5 list-inside px-3 text-justify text-base"
           dangerouslySetInnerHTML={{ __html: berita.description! }}
         />
 
-        <Link
-          href="/berita"
-          className={buttonVariants({ size: "sm", className: "mt-10" })}
-        >
-          Lihat Berita Lainnya
-        </Link>
+        <div className="px-3 ">
+          <Link
+            href="/berita"
+            className={buttonVariants({ size: "sm", className: "mt-10" })}
+          >
+            Lihat Berita Lainnya
+          </Link>
+        </div>
       </div>
     </div>
   );
