@@ -37,8 +37,8 @@ export default function Info() {
                 <div className="relative rounded-md">
                   <Image
                     src={info.img_url}
-                    width={800}
-                    height={600}
+                    width={400}
+                    height={300}
                     alt={`img-${info.title}`}
                     className="w-full rounded-md object-cover"
                   />

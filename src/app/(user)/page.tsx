@@ -12,7 +12,6 @@ import prisma from "@/lib/prisma";
 
 export function generateMetadata(): Metadata {
   return {
-    title: "Home",
     alternates: {
       canonical: process.env.DOMAIN,
     },

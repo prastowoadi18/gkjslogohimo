@@ -33,6 +33,34 @@ const placeholderBerita = [
   },
 ];
 
+const placeholderMajelis = [
+  {
+    nama: "Budi Sujiadmoko",
+    slug: "budi-sujiadmoko",
+    imageUrl: "img4.webp",
+    bidang: "Diaken",
+  },
+  {
+    nama: "Budi Sujiadmoko 2",
+    slug: "budi-sujiadmoko-2",
+    imageUrl: "img4.webp",
+    bidang: "Diaken",
+  },
+  {
+    nama: "Budi Sujiadmoko 3",
+    slug: "budi-sujiadmoko-3",
+    imageUrl: "img4.webp",
+    bidang: "Diaken",
+  },
+  {
+    nama: "Budi Sujiadmoko 4",
+    slug: "budi-sujiadmoko-4",
+    imageUrl: "img4.webp",
+    bidang: "Diaken",
+  },
+];
+
 module.exports = {
   placeholderBerita,
+  placeholderMajelis,
 };

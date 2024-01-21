@@ -37,7 +37,7 @@ const Footer = () => {
                   aria-label="email"
                 >
                   <Mail className="h-5 w-5" />
-                  <p className="text-base text-muted-foreground group-hover:text-blue-500 group-hover:transition-all group-hover:duration-300">
+                  <p className="text-base text-gray-600 group-hover:text-blue-500 group-hover:transition-all group-hover:duration-300">
                     gkjslogohimo@gmail.com
                   </p>
                 </a>
@@ -48,15 +48,13 @@ const Footer = () => {
                   className="group mb-3 flex items-center space-x-3 transition-all duration-300 hover:text-blue-500"
                 >
                   <MapPin className="h-5 w-5" />
-                  <p className="text-base text-muted-foreground group-hover:text-blue-500 group-hover:transition-all group-hover:duration-300">
+                  <p className="text-base text-gray-600 group-hover:text-blue-500 group-hover:transition-all group-hover:duration-300">
                     Gaton, Kabupaten Wonogiri
                   </p>
                 </a>
                 <div className="flex items-center space-x-3">
                   <PhoneCall className="h-5 w-5" />
-                  <p className="text-base text-muted-foreground">
-                    082777321999
-                  </p>
+                  <p className="text-base text-gray-600">082777321999</p>
                 </div>
               </div>
             </div>
@@ -69,19 +67,19 @@ const Footer = () => {
                   <div className="flex flex-col">
                     <Link
                       href="/#berita_terbaru"
-                      className="mb-3 text-base text-muted-foreground transition-all duration-300 hover:text-blue-500"
+                      className="mb-3 text-base text-gray-600 transition-all duration-300 hover:text-blue-500"
                     >
                       Berita Terbaru
                     </Link>
                     <Link
                       href="/tentang/majelis"
-                      className="mb-3 text-base text-muted-foreground transition-all duration-300 hover:text-blue-500"
+                      className="mb-3 text-base text-gray-600 transition-all duration-300 hover:text-blue-500"
                     >
                       Majelis
                     </Link>
                     <Link
                       href="/berita"
-                      className="text-base text-muted-foreground transition-all duration-300 hover:text-blue-500"
+                      className="text-base text-gray-600 transition-all duration-300 hover:text-blue-500"
                     >
                       Berita
                     </Link>
@@ -89,19 +87,19 @@ const Footer = () => {
                   <div className="flex flex-col">
                     <Link
                       href="/tentang/sejarah"
-                      className="mb-3 text-base text-muted-foreground transition-all duration-300 hover:text-blue-500"
+                      className="mb-3 text-base text-gray-600 transition-all duration-300 hover:text-blue-500"
                     >
                       Sejarah Lengkap
                     </Link>
                     <Link
                       href="/tentang/gereja"
-                      className="mb-3 text-base text-muted-foreground transition-all duration-300 hover:text-blue-500"
+                      className="mb-3 text-base text-gray-600 transition-all duration-300 hover:text-blue-500"
                     >
                       Gereja
                     </Link>
                     <Link
                       href="/tentang/pendeta"
-                      className="text-base text-muted-foreground transition-all duration-300 hover:text-blue-500"
+                      className="text-base text-gray-600 transition-all duration-300 hover:text-blue-500"
                     >
                       Profile Pendeta
                     </Link>
@@ -155,7 +153,7 @@ const Footer = () => {
         </MaxWidthWrapper>
       </footer>
       <MaxWidthWrapper className="pb-10 pt-5">
-        <h1 className="text-sm font-semibold text-muted-foreground">
+        <h1 className="text-sm font-semibold text-gray-600">
           Dibuat oleh GKJ Slogohimo 2023
         </h1>
       </MaxWidthWrapper>

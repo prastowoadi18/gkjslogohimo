@@ -207,3 +207,5 @@ export const TENTANG_GEREJA = {
     },
   ],
 };
+
+export const IMG_MAJELIS = ["img4.webp"];

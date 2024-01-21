@@ -11,6 +11,12 @@ const link = [
   },
 ];
 
+interface PageProps {
+  searchParams: {
+    page?: string;
+  };
+}
+
 export const metadata: Metadata = {
   title: "Majelis",
   description:
@@ -22,7 +28,7 @@ export const metadata: Metadata = {
   },
 };
 
-const TentangMajelistPage = () => {
+export default async function Page({ searchParams: { page } }: PageProps) {
   return (
     <MaxWidthWrapper className="py-5">
       <TitleSection
@@ -31,9 +37,7 @@ const TentangMajelistPage = () => {
         desc="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ab?"
         link={link}
       />
-      <ContentMajelis />
+      <ContentMajelis page={page ? parseInt(page) : undefined} />
     </MaxWidthWrapper>
   );
-};
-
-export default TentangMajelistPage;
+}

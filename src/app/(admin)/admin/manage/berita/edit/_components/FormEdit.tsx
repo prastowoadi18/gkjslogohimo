@@ -34,7 +34,7 @@ export default function FormEdit({ berita }: FormEditProps) {
   const form = useForm<EditBeritaValues>({
     resolver: zodResolver(editBeritaSchema),
     defaultValues: {
-      id: berita.id.toString(),
+      id: berita.id,
       title: berita.title,
       description: berita.description!,
       imageUrl: berita.imageUrl!,

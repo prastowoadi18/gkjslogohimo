@@ -17,7 +17,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "Webiste Gereja Kristen Jawa Slogohimo",
+    default: "GKJ Slogohimo Website",
     template: "%s | GKJ Slogohimo",
   },
   metadataBase: new URL(
