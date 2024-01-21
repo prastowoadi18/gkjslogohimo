@@ -33,8 +33,8 @@ export default function TentangGereja() {
             className="hidden h-96 w-full rounded-md md:block"
             src={TENTANG_GEREJA.img_url}
             alt={`img-${TENTANG_GEREJA.title}`}
-            width={500}
-            height={500}
+            width={400}
+            height={300}
           />
           <div className="flex-1 md:px-5 lg:px-16">
             <h1 className="mb-5 text-2xl font-semibold">

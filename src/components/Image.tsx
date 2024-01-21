@@ -32,6 +32,7 @@ const Image = (props: ImageProps) => {
         src={src}
         alt={alt}
         quality={100}
+        loading="lazy"
         onLoad={() => setLoading(false)}
         {...rest}
       />

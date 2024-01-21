@@ -1,18 +1,16 @@
 "use server";
 
 import { redirect } from "next/navigation";
-import { UTApi } from "uploadthing/server";
-import { NextResponse } from "next/server";
 import { revalidatePath } from "next/cache";
 
 import { nanoid } from "nanoid";
 import { currentUser } from "@clerk/nextjs";
 
 import { toSlug } from "@/lib/utils";
-import { createBeritaSchema, editBeritaSchema } from "@/lib/validation";
+import { createMajelisSchema, editMajelisSchema } from "@/lib/validation";
 import prisma from "@/lib/prisma";
 
-export async function createBerita(formData: FormData) {
+export async function createMajelis(formData: FormData) {
   try {
     const user = await currentUser();
 
@@ -21,15 +19,15 @@ export async function createBerita(formData: FormData) {
     }
 
     const values = Object.fromEntries(formData.entries());
-    const { title, description, imageUrl } = createBeritaSchema.parse(values);
+    const { nama, bidang, imageUrl } = createMajelisSchema.parse(values);
 
-    const slug = `${toSlug(title)}-${nanoid(10)}`;
+    const slug = `${toSlug(nama)}-${nanoid(10)}`;
 
-    await prisma.berita.create({
+    await prisma.majelis.create({
       data: {
         slug,
-        title: title.trim(),
-        description: description!.replace(/ style="[^"]*"/g, ""),
+        nama: nama.trim(),
+        bidang,
         imageUrl,
       },
     });
@@ -42,28 +40,28 @@ export async function createBerita(formData: FormData) {
   }
 
   revalidatePath("/", "layout");
-  redirect("/admin/manage/berita/tambah");
+  redirect("/admin/manage/majelis/tambah");
 }
 
-export async function editBerita(formData: FormData) {
+export async function editMajelis(formData: FormData) {
   try {
     const user = await currentUser();
 
     const values = Object.fromEntries(formData.entries());
-    const { id, title, description, imageUrl } = editBeritaSchema.parse(values);
+    const { id, bidang, imageUrl, nama } = editMajelisSchema.parse(values);
 
     if (!user) {
       throw new Error("Not authorized");
     }
 
-    const slug = `${toSlug(title)}-${nanoid(10)}`;
+    const slug = `${toSlug(nama)}-${nanoid(10)}`;
 
-    await prisma.berita.update({
+    await prisma.majelis.update({
       where: { id },
       data: {
         slug,
-        title: title.trim(),
-        description: description!.replace(/ style="[^"]*"/g, ""),
+        nama: nama.trim(),
+        bidang,
         imageUrl,
       },
     });
@@ -76,10 +74,10 @@ export async function editBerita(formData: FormData) {
   }
 
   revalidatePath("/", "layout");
-  redirect(`/admin/manage/berita`);
+  redirect(`/admin/manage/majelis`);
 }
 
-export async function deleteBerita(id: string) {
+export async function deleteMajelis(id: string) {
   try {
     const user = await currentUser();
 
@@ -87,15 +85,7 @@ export async function deleteBerita(id: string) {
       throw new Error("Not authorized");
     }
 
-    const berita = await prisma.berita.findUnique({
-      where: { id },
-    });
-
-    if (berita?.imageUrl) {
-      await deleteImageBerita(berita.imageUrl);
-    }
-
-    await prisma.berita.delete({
+    await prisma.majelis.delete({
       where: { id },
     });
   } catch (error) {
@@ -106,16 +96,5 @@ export async function deleteBerita(id: string) {
     return { error: message };
   }
   revalidatePath("/", "layout");
-  redirect(`/admin/manage/berita`);
-}
-
-export async function deleteImageBerita(value: string) {
-  try {
-    const newUrl = value.substring(value.lastIndexOf("/") + 1);
-    const utapi = new UTApi();
-    const data = await utapi.deleteFiles(newUrl);
-    return data;
-  } catch (error) {
-    return new NextResponse("Internal Error", { status: 500 });
-  }
+  redirect(`/admin/manage/majelis`);
 }

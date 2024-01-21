@@ -50,6 +50,23 @@ export default function Page() {
             </div>
           </div>
         </Link>
+        <Link
+          aria-label="manage-majelis"
+          href="/admin/manage/majelis"
+          className="group transition-all duration-300 hover:text-blue-400"
+        >
+          <div className="group flex cursor-pointer items-center border-b py-3">
+            <div className="flex-none px-3">
+              <Settings className="h-5 w-5" />
+            </div>
+            <div className="flex-1">
+              <h1 className="text-lg font-semibold text-black group-hover:text-black">
+                Majelis
+              </h1>
+              <p className="text-base italic">Manage Majelis</p>
+            </div>
+          </div>
+        </Link>
       </div>
     </MaxWidthWrapper>
   );

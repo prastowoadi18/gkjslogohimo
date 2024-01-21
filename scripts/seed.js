@@ -1,4 +1,4 @@
-const { placeholderBerita } = require("./placeholder-data");
+const { placeholderBerita, placeholderMajelis } = require("./placeholder-data");
 const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
 
@@ -15,6 +15,20 @@ async function main() {
     }),
   );
 }
+
+// async function main() {
+//   await Promise.all(
+//     placeholderMajelis.map(async (majelis) => {
+//       await prisma.majelis.upsert({
+//         where: {
+//           slug: majelis.slug,
+//         },
+//         update: majelis,
+//         create: majelis,
+//       });
+//     }),
+//   );
+// }
 
 main()
   .then(async () => {
