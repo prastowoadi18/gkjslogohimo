@@ -1,7 +1,5 @@
 import { Metadata } from "next";
 
-import prisma from "@/lib/prisma";
-
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { TitleSection } from "@/components/TitleSection";
 import { ContentBerita } from "../_components";

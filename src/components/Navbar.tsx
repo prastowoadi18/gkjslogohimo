@@ -10,6 +10,7 @@ import { Facebook, Instagram, Youtube } from "lucide-react";
 import { NAV_MENU } from "@/configs";
 
 import prisma from "@/lib/prisma";
+import MobileNav from "./MobileNav";
 
 export default async function Navbar() {
   const berita = await prisma.berita.findMany({
@@ -39,9 +40,7 @@ export default async function Navbar() {
         <MaxWidthWrapper>
           <div className="border-b border-gray-200">
             <div className="flex h-16 items-center">
-              {/* TODO: Mobile nav */}
-
-              <div className="ml-4 flex lg:ml-0">
+              <div className="ml-4 flex-1 lg:ml-0 lg:flex">
                 <Link href="/">
                   <Image
                     src="/assets/logo.png"
@@ -52,6 +51,10 @@ export default async function Navbar() {
                     rounded="rounded-full"
                   />
                 </Link>
+              </div>
+
+              <div className="mr-2">
+                <MobileNav navmenu={newNavMenu} />
               </div>
               <div className="z-50 hidden lg:ml-8 lg:block lg:self-stretch">
                 <NavItems data={newNavMenu} />
