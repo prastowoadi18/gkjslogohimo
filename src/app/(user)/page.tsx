@@ -9,7 +9,6 @@ import {
 } from "@/app/(user)/_components";
 
 import prisma from "@/lib/prisma";
-import addBlurredDataUrls from "@/lib/getBase64";
 
 export function generateMetadata(): Metadata {
   return {
@@ -25,14 +24,12 @@ export default async function Page() {
     orderBy: { createdAt: "desc" },
   });
 
-  const beritaWithImgBlur = await addBlurredDataUrls(berita);
-
   return (
     <div className="">
       <Hero />
       <Info />
       <JadwalIbadah />
-      <BeritaTerbaru berita={beritaWithImgBlur} />
+      <BeritaTerbaru berita={berita} />
       <TentangGereja />
     </div>
   );

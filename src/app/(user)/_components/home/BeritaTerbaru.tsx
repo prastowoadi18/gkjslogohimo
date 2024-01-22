@@ -41,7 +41,7 @@ export default function BeritaTerbaru({ berita }: BeritaTerbaruProps) {
         </div>
 
         <div className="grid grid-cols-1 gap-10 pt-20 md:grid-cols-2 lg:grid-cols-3">
-          {berita.map((item: any) => (
+          {berita.map((item) => (
             <div className="rounded-b-md bg-white" key={item.id}>
               <div
                 className="group relative h-64 overflow-hidden rounded-t-md bg-gray-200"
@@ -53,8 +53,6 @@ export default function BeritaTerbaru({ berita }: BeritaTerbaruProps) {
                   fill
                   sizes="(min-width: 1360px) 347px, (min-width: 1040px) 26.67vw, (min-width: 780px) calc(50vw - 100px), calc(100vw - 20px)"
                   className="object-cover group-hover:opacity-75"
-                  placeholder="blur"
-                  blurDataURL={item.blur}
                 />
               </div>
               <div className="px-6 py-4">
