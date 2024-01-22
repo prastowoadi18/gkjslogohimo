@@ -34,7 +34,7 @@ const Footer = () => {
                 <a
                   href="mailto:gkjslogohimo@gmail.com, gkjslogohimo@gmail.com?subject=Tanya GKJ Slogohimo"
                   className="group mb-3 flex items-center space-x-3 transition-all duration-300 hover:text-blue-500"
-                  aria-label="email"
+                  aria-label="gkjslogohimo@gmail.com"
                 >
                   <Mail className="h-5 w-5" />
                   <p className="text-base text-gray-600 group-hover:text-blue-500 group-hover:transition-all group-hover:duration-300">
@@ -44,7 +44,7 @@ const Footer = () => {
                 <a
                   href="https://maps.app.goo.gl/pS7CVBFQ4VD8iyeu9"
                   target="_blank"
-                  aria-label="alamat"
+                  aria-label="Gaton, Kabupaten Wonogiri"
                   className="group mb-3 flex items-center space-x-3 transition-all duration-300 hover:text-blue-500"
                 >
                   <MapPin className="h-5 w-5" />
