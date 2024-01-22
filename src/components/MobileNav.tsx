@@ -1,12 +1,12 @@
 "use client";
 
-import { NAV_MENU } from "@/configs";
-// import { PRODUCT_CATEGORIES } from '@/config'
-import { Menu, X } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { Menu, X } from "lucide-react";
+
+import Link from "next/link";
+import Image from "./Image";
+import { useOnClickOutside } from "@/hooks/use-on-click-outside";
 
 type NavMenuType = {
   label: string;
@@ -26,23 +26,16 @@ interface MobileNavProps {
 
 const MobileNav = ({ navmenu }: MobileNavProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const navRef = useRef<HTMLDivElement | null>(null);
+
+  useOnClickOutside(navRef, () => setIsOpen(false));
 
   const pathname = usePathname();
 
-  // whenever we click an item in the menu and navigate away, we want to close the menu
   useEffect(() => {
     setIsOpen(false);
   }, [pathname]);
 
-  // when we click the path we are currently on, we still want the mobile menu to close,
-  // however we cant rely on the pathname for it because that won't change (we're already there)
-  const closeOnCurrent = (href: string) => {
-    if (pathname === href) {
-      setIsOpen(false);
-    }
-  };
-
-  // remove second scrollbar when mobile menu is open
   useEffect(() => {
     if (isOpen) document.body.classList.add("overflow-hidden");
     else document.body.classList.remove("overflow-hidden");
@@ -67,7 +60,10 @@ const MobileNav = ({ navmenu }: MobileNavProps) => {
 
       <div className="fixed inset-0 z-40 flex overflow-y-scroll overscroll-y-none">
         <div className="w-4/5">
-          <div className="relative flex w-full max-w-sm flex-col overflow-y-auto bg-white/90 pb-12 shadow-xl backdrop-blur-md">
+          <div
+            className="relative flex w-full max-w-sm flex-col overflow-y-auto bg-white/90 pb-12 shadow-xl backdrop-blur-md"
+            ref={navRef}
+          >
             <div className="flex px-4 pb-2 pt-5">
               <button
                 type="button"
@@ -80,36 +76,34 @@ const MobileNav = ({ navmenu }: MobileNavProps) => {
 
             <div className="mt-2">
               <ul>
-                {navmenu.map((category) => (
-                  <li
-                    key={category.label}
-                    className="space-y-10 px-4 pb-8 pt-10"
-                  >
+                {navmenu.map((item) => (
+                  <li key={item.label} className="space-y-10 px-4 pb-8 pt-10">
                     <div className="border-b border-gray-400">
                       <div className="-mb-px flex">
                         <p className="flex-1 whitespace-nowrap border-b-2 border-transparent py-4 text-lg font-medium text-gray-900">
-                          {category.label}
+                          {item.label}
                         </p>
                       </div>
                     </div>
 
                     <div className="grid grid-cols-2 gap-x-4 gap-y-10">
-                      {category.featured.map((item) => (
+                      {item.featured.map((item) => (
                         <div
                           key={item.name}
                           className="group relative text-base"
                         >
-                          <div className="relative aspect-square overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75">
+                          <div className="relative h-3/4 overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75">
                             <Image
-                              fill
+                              width={400}
+                              height={300}
                               src={item.imageSrc!}
-                              alt="product category image"
+                              alt={`img-${item.name}`}
                               className="object-cover object-center"
                             />
                           </div>
                           <Link
                             href={item.href}
-                            className="mt-6 block font-medium text-gray-900"
+                            className="mt-2 block text-sm font-medium text-gray-700"
                           >
                             {item.name}
                           </Link>
