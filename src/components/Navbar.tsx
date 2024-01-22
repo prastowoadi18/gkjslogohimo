@@ -40,7 +40,7 @@ export default async function Navbar() {
         <MaxWidthWrapper>
           <div className="border-b border-gray-200">
             <div className="flex h-16 items-center">
-              <div className="ml-4 flex-1 lg:ml-0 lg:flex">
+              <div className="hidden lg:block">
                 <Link href="/">
                   <Image
                     src="/assets/logo.png"
@@ -52,14 +52,28 @@ export default async function Navbar() {
                   />
                 </Link>
               </div>
-
-              <div className="mr-2">
-                <MobileNav navmenu={newNavMenu} />
+              <div className="relative w-full lg:hidden">
+                <div className="flex w-full justify-center">
+                  <Link href="/">
+                    <Image
+                      src="/assets/logo.png"
+                      width={100}
+                      height={100}
+                      alt="logo-img"
+                      className="h-12 w-12 transition-all duration-300 hover:scale-105"
+                      rounded="rounded-full"
+                    />
+                  </Link>
+                </div>
+                <div className="absolute left-1 top-3">
+                  <MobileNav navmenu={newNavMenu} />
+                </div>
               </div>
+
               <div className="z-50 hidden lg:ml-8 lg:block lg:self-stretch">
                 <NavItems data={newNavMenu} />
               </div>
-              <div className="ml-auto flex items-center">
+              <div className="hidden lg:ml-auto lg:flex lg:items-center">
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
                   <div className="flex">
                     <Link
