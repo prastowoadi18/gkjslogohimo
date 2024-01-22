@@ -35,24 +35,3 @@ export const editMajelisSchema = z.object({
 });
 
 export type EditMajelisValues = z.infer<typeof editMajelisSchema>;
-
-const BasicImageSchema = z.object({
-  id: z.string(),
-  slug: z.string(),
-  title: z.string(),
-  description: z.string().optional(),
-  imageUrl: z.string().optional(),
-  createdAt: z.date(),
-  updatedAt: z.date(),
-});
-
-const PhotoSchema = z.object({
-  blurredDataUrl: z.string().optional(),
-});
-
-export const ImagesSchemaWithPhotos = BasicImageSchema.extend({
-  photos: z.array(PhotoSchema),
-});
-
-export type Photo = z.infer<typeof PhotoSchema>;
-export type ImagesResults = z.infer<typeof ImagesSchemaWithPhotos>;
