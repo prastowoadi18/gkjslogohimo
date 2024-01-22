@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import { motion } from "framer-motion";
 
-import Image from "@/components/Image";
+import Image from "next/image";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 
 import { TENTANG_GEREJA } from "@/configs";
@@ -26,29 +26,24 @@ export default function Info() {
           className="grid grid-cols-1 gap-3 gap-y-12 sm:gap-x-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-0"
         >
           {TENTANG_GEREJA.info.map((info) => (
-            <div
+            <Link
+              href={info.link}
+              className="relative aspect-square overflow-hidden rounded-xl bg-gray-200"
               key={info.title}
-              className="text-left md:flex md:items-start lg:flex lg:justify-center"
             >
-              <Link
-                href={info.link}
-                className="transition-all duration-300 hover:scale-105"
-              >
-                <div className="relative rounded-md">
-                  <Image
-                    src={info.img_url}
-                    width={400}
-                    height={300}
-                    alt={`img-${info.title}`}
-                    className="w-full rounded-md object-cover"
-                  />
-                  <div className="absolute bottom-4 left-4 font-bold">
-                    <h1 className="text-base text-white">{info.title}</h1>
-                    <p className="text-sm text-white">{info.description}</p>
-                  </div>
-                </div>
-              </Link>
-            </div>
+              <Image
+                src={info.img_url}
+                alt={`img-${info.title}`}
+                fill
+                sizes="(min-width: 1360px) 352px, (min-width: 1040px) 26.67vw, (min-width: 780px) calc(50vw - 92px), calc(100vw - 20px)"
+                className="object-cover"
+                priority
+              />
+              <div className="absolute bottom-4 left-4 font-bold">
+                <h1 className="text-base text-white">{info.title}</h1>
+                <p className="text-sm text-white">{info.description}</p>
+              </div>
+            </Link>
           ))}
         </motion.div>
       </MaxWidthWrapper>
