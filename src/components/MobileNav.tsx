@@ -92,9 +92,10 @@ const MobileNav = ({ navmenu }: MobileNavProps) => {
                           key={item.name}
                           className="group relative text-base"
                         >
-                          <div className="relative aspect-square overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75">
+                          <div className="relative h-3/4 overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75">
                             <Image
-                              fill
+                              width={400}
+                              height={300}
                               src={item.imageSrc!}
                               alt={`img-${item.name}`}
                               className="object-cover object-center"
@@ -102,7 +103,7 @@ const MobileNav = ({ navmenu }: MobileNavProps) => {
                           </div>
                           <Link
                             href={item.href}
-                            className="mt-6 block font-medium text-gray-900"
+                            className="mt-2 block text-sm font-medium text-gray-700"
                           >
                             {item.name}
                           </Link>

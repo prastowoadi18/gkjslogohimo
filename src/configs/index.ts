@@ -4,7 +4,7 @@ export const NAV_MENU = [
     value: "tentang" as const,
     featured: [
       {
-        name: "Sejarah Lengkap",
+        name: "Sejarah",
         href: `/tentang/sejarah`,
         imageSrc: "/assets/img2.webp",
       },
