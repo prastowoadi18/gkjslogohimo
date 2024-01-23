@@ -1,19 +1,19 @@
 import { format } from "date-fns";
 import { id } from "date-fns/locale";
 
-import Image from "@/components/Image";
+import Image from "next/image";
 
 import { TENTANG_GEREJA } from "@/configs";
 
 export default function Hero() {
   return (
-    <div className="relative bg-black/20">
+    <div className="relative h-72 bg-black/20">
       <Image
-        className="h-52 w-full rounded-md object-cover md:h-60 md:object-[center_-2rem] lg:h-72 lg:object-[center_-7rem]"
+        className="rounded-md object-cover md:h-60 md:object-[center_-2rem] lg:h-72 lg:object-[center_-7rem]"
         src={TENTANG_GEREJA.img_url}
         alt={`img-${TENTANG_GEREJA.title}`}
-        width={800}
-        height={700}
+        fill
+        sizes="(min-width: 1360px) 1120px, (min-width: 780px) calc(89.29vw - 76px), calc(100vw - 20px)"
       />
 
       <div className="absolute bottom-5 left-4 rounded-md">

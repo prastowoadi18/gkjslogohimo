@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "@/components/Image";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 import { useCardModal } from "@/hooks/use-card-modal";
@@ -10,15 +10,17 @@ export default function Content() {
   const { onOpen } = useCardModal();
 
   return (
-    <div className="flex flex-col items-center justify-center md:flex-row">
-      <Image
-        className="h-[27rem] w-full rounded-md"
-        src={TENTANG_GEREJA.img_url_pendeta}
-        alt={`img-${TENTANG_GEREJA.pendeta_aktif}`}
-        width={500}
-        height={500}
-      />
-      <div className="mt-10 flex-1 px-3 md:px-5 lg:px-16">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div className="relative aspect-square overflow-hidden rounded-md shadow-md">
+        <Image
+          className="object-cover"
+          src={TENTANG_GEREJA.img_url_pendeta}
+          alt={`img-${TENTANG_GEREJA.pendeta_aktif}`}
+          fill
+          sizes="(min-width: 1360px) 560px, (min-width: 780px) calc(44.64vw - 38px), calc(50vw - 10px)"
+        />
+      </div>
+      <div className="mt-10 flex-1 self-center px-3 md:px-5 lg:col-span-2 lg:px-16">
         <h1 className="mb-3 text-2xl font-semibold">
           {TENTANG_GEREJA.pendeta_aktif}
         </h1>

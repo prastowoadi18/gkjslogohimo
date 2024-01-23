@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import Image from "@/components/Image";
+import Image from "next/image";
 
 import { TENTANG_GEREJA } from "@/configs";
 
@@ -8,17 +8,14 @@ export default function Content() {
   return (
     <div className="grid grid-cols-1 gap-5 pb-20 pt-10 md:grid-cols-2 md:gap-8 lg:grid-cols-4 lg:gap-5 lg:pt-16">
       {TENTANG_GEREJA.pepanthan.map((item) => (
-        <div
-          className="max-w-sm overflow-hidden rounded shadow-lg"
-          key={item.id}
-        >
-          <div className="relative bg-black/20">
+        <div className="rounded-b-md shadow-md" key={item.id}>
+          <div className="relative h-60 overflow-hidden rounded-t-md">
             <Image
-              className="w-full"
+              className="object-cover"
               src={item.imgUrl}
               alt={`img-${item.title}`}
-              width={500}
-              height={500}
+              fill
+              sizes="(min-width: 1360px) 265px, (min-width: 1040px) 20vw, (min-width: 780px) calc(50vw - 96px), calc(100vw - 20px)"
             />
             <div className="absolute right-2 top-2">
               <p className="rounded-md bg-gradient-to-r from-black to-black/50 px-2 py-1 text-sm font-semibold text-white">

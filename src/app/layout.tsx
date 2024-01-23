@@ -12,6 +12,7 @@ import { METADATA } from "@/configs";
 import { ModalProvider } from "@/components/providers/modal-providers";
 
 import "./globals.css";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -70,6 +71,7 @@ export default function RootLayout({
           <Footer />
           <ModalProvider />
           <Toaster position="top-right" richColors />
+          <ScrollToTopButton />
         </main>
       </body>
     </html>
