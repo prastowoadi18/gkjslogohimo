@@ -56,10 +56,10 @@ export const METADATA = {
     url: process.env.DOMAIN,
     siteName: "GKJ Slogohimo",
     locale: "id-ID",
-    img: "https://utfs.io/f/ff8d1b92-19f2-4403-b3e7-43fb7ee892bc-cfbm5x.png",
+    img: "open-graph.png",
   },
   exTitle: "| GKJ Slogohimo",
-  profile: "https://utfs.io/f/ff8d1b92-19f2-4403-b3e7-43fb7ee892bc-cfbm5x.png",
+  profile: "open-graph.png",
 };
 
 export const DUMMY_BERITA = [
