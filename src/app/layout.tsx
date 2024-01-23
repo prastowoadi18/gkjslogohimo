@@ -36,11 +36,11 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: `${METADATA.creator}`,
-    description: METADATA.description,
-    images: METADATA.profile,
-    url: METADATA.openGraph.url,
-    siteName: METADATA.openGraph.siteName,
-    locale: METADATA.openGraph.locale,
+    description: `${METADATA.description}`,
+    images: `${METADATA.profile}`,
+    url: `${METADATA.openGraph.url}`,
+    siteName: `${METADATA.openGraph.siteName}`,
+    locale: `${METADATA.openGraph.locale}`,
     type: "website",
   },
 };
