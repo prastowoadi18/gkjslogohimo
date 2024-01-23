@@ -33,6 +33,7 @@ export default function ScrollToTopButton() {
   }, []);
   return (
     <button
+      aria-label="button-toTop"
       className={cn(
         "fixed bottom-0 right-0 p-5 md:p-10",
         isVisible ? "scrollToTopButton visible" : "scrollToTopButton",
