@@ -100,7 +100,6 @@ const MobileNav = ({ navmenu }: MobileNavProps) => {
                               src={item.imageSrc!}
                               alt={`img-${item.name}`}
                               className="object-cover object-center"
-                              priority
                             />
                           </div>
                           <Link
