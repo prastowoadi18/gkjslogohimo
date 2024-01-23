@@ -13,6 +13,7 @@ import { ModalProvider } from "@/components/providers/modal-providers";
 
 import "./globals.css";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
+import { RouteChangeListener } from "@/components/RouteChangeListener";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -65,14 +66,15 @@ export default function RootLayout({
           speed={200}
           shadow="0 0 10px #3b82f6,0 0 5px #60a5fa"
         />
-        <main className="">
+
+        <RouteChangeListener>
           <Navbar />
           {children}
           <Footer />
           <ModalProvider />
           <Toaster position="top-right" richColors />
           <ScrollToTopButton />
-        </main>
+        </RouteChangeListener>
       </body>
     </html>
   );
