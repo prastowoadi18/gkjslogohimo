@@ -100,11 +100,11 @@ export const TENTANG_GEREJA = {
     "Sejarah mencatat dalam kurun waktu tahun 1890-1910 perjuangan mengabarkan injil terus diupayakan oleh Zending di wilayah Surakarta. Buah pelayanan itu adalah terbentuknya klasis Surakarta Barat dan klasis Surakarta Timur pada tahun 1957. Pada 28 Januari 1983 klasis Surakarta Timur terbagi menjadi tiga klasis, yaitu Sala Timur, Lawu, dan Wonogiri. Kala itu klasis Wonogiri baru terdiri dari GKJ Wonogiri, GKJ Sukoharjo, GKJ Baki, GKJ Wuryantoro, dan GKJ Slogohimo. GKJ Slogohimo sendiri terbentuk jauh sebelum klasis Wonogiri terbentuk. Cikal bakal GKJ Slogohimo dirintis melalui penginjilan pertama di Bulukerto dengan cara penjualan buku buku oleh Bapak Reksodikromo dan Bapak Wiryo dari Tirtomoyo tahun 1928 sebagai utusan Zending Surakarta. Dalam Prosesnya, warga masyarakat Bulukerto menerima pemberitaan Injil dan meminta pelayanan babtis. Akhirnya, warga masyarakat Bulukerto menerima sakramen babtis pada 25 November 1928 di Tirtomoyo oleh Ds. D.H. Van Ejik. Makin hari jumlah mereka terus bertambah sehingga memungkinkan untuk mengadakan kelompok ibadah sendiri. Agar pemeliharaan iman tetap terjaga, kelompok Bulukerto dilayani oleh guru injil Kartosuro yaitu bapak Darmo Efraim. Semakin hari jumlah warga yang mengenal Kristus semakin banyak. Populasi warga yang bertambah menjadikan kebutuhan pelayanan semakin banyak juga, sehingga pelayanan warga kristen bulu kerto dibantu Bapak Petrus dan Bapak Dwi Sapto Sutrisno. Pengaruh Bapak Petrus di pelayanan ini sangat besar sehingga banyak yang minta dibaptis. Tahun 1931 beberapa warga wono sari mendapat pelayanan baptis dan pada tahun 1932 di layankan baptis masal sebanyak 40 orang dari desa Waru, Slogohimo",
   galeri: [
     "/assets/img2.webp",
+    "/assets/img5.webp",
     "/assets/img2.webp",
+    "/assets/img5.webp",
     "/assets/img2.webp",
-    "/assets/img2.webp",
-    "/assets/img2.webp",
-    "/assets/img2.webp",
+    "/assets/img5.webp",
   ],
   pepanthan: [
     {

@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { DetailPendetaModal } from "../modals/detail-pendeta-modal";
+import { CardGaleriModal } from "../modals/galeri-modal";
 
 export const ModalProvider = () => {
   const [isMounted, setIsMounted] = useState(false);
@@ -17,6 +18,7 @@ export const ModalProvider = () => {
   return (
     <>
       <DetailPendetaModal />
+      <CardGaleriModal />
     </>
   );
 };
