@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `${METADATA.creator}`,
     description: METADATA.description,
-    images: METADATA.openGraph.url,
+    images: METADATA.profile,
     url: METADATA.openGraph.url,
     siteName: METADATA.openGraph.siteName,
     locale: METADATA.openGraph.locale,
