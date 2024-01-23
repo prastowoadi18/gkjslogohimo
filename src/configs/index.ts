@@ -59,7 +59,7 @@ export const METADATA = {
     img: "https://utfs.io/f/ff8d1b92-19f2-4403-b3e7-43fb7ee892bc-cfbm5x.png",
   },
   exTitle: "| GKJ Slogohimo",
-  profile: "https://utfs.io/f/fc5d9226-e5b6-42f8-904e-cf93d8f07419-1xcy8.webp",
+  profile: "https://utfs.io/f/ff8d1b92-19f2-4403-b3e7-43fb7ee892bc-cfbm5x.png",
 };
 
 export const DUMMY_BERITA = [
