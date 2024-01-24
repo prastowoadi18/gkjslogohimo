@@ -5,7 +5,7 @@ import { TENTANG_GEREJA } from "@/configs";
 
 export default function Content() {
   return (
-    <div className="px-3">
+    <div className="px-3" data-aos="fade-left">
       <h1 className="text-lg font-semibold">{TENTANG_GEREJA.title}</h1>
       <h2 className="text-base text-muted-foreground">
         {format(new Date(TENTANG_GEREJA.created_date), "iiii, dd MMMM yyyy", {

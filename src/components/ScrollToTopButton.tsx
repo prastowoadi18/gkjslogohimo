@@ -1,11 +1,5 @@
 "use client";
 
-import {
-  Variants,
-  motion,
-  useAnimationControls,
-  useScroll,
-} from "framer-motion";
 import React, { useEffect, useState } from "react";
 import { ArrowUp } from "lucide-react";
 import { cn, scrollToTop } from "@/lib/utils";
@@ -23,10 +17,7 @@ export default function ScrollToTopButton() {
   };
 
   useEffect(() => {
-    // Add scroll event listener when the component mounts
     window.addEventListener("scroll", handleScroll);
-
-    // Remove the event listener when the component unmounts
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -40,8 +31,8 @@ export default function ScrollToTopButton() {
       )}
       onClick={scrollToTop}
     >
-      <div className="rounded-full bg-blue-500/80 p-2">
-        <ArrowUp size={30} className="text-white" />
+      <div className="rounded-full bg-white p-2 shadow-[-10px_-10px_30px_4px_rgba(0,0,0,0.1),_10px_10px_30px_4px_rgba(45,78,255,0.15)] transition-all duration-300 hover:-rotate-12 hover:scale-105">
+        <ArrowUp size={30} className="text-blue-500" />
       </div>
     </button>
   );
