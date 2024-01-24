@@ -26,7 +26,7 @@ export default function ScrollToTopButton() {
     <button
       aria-label="button-toTop"
       className={cn(
-        "fixed bottom-0 right-0 p-5 md:p-10",
+        "fixed bottom-0 right-0 rounded-full p-5",
         isVisible ? "scrollToTopButton visible" : "scrollToTopButton",
       )}
       onClick={scrollToTop}
