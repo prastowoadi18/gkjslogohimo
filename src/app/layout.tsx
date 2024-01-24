@@ -11,9 +11,10 @@ import Footer from "@/components/Footer";
 import { METADATA } from "@/configs";
 import { ModalProvider } from "@/components/providers/modal-providers";
 
-import "./globals.css";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import { RouteChangeListener } from "@/components/RouteChangeListener";
+
+import "@/app/globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 

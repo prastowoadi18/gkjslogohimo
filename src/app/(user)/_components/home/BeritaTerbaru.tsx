@@ -17,6 +17,7 @@ export default function BeritaTerbaru({ berita }: BeritaTerbaruProps) {
     <section
       className="mb-10 border-t border-gray-200 bg-slate-50 lg:mb-24"
       id="berita_terbaru"
+      data-aos="fade-left"
     >
       <MaxWidthWrapper className="py-20">
         <div className="flex flex-col items-start gap-10 md:flex-row md:items-center">

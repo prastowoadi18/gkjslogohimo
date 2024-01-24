@@ -34,14 +34,20 @@ export const CardGaleriModal = () => {
                   sizes="(min-width: 808px) 50vw, 100vw"
                 />
               </div>
-              <div className="mt-5 grid grid-cols-3 gap-2 md:grid-cols-6">
+              <div
+                className={cn(
+                  "mt-5 grid grid-cols-3 gap-2",
+                  data.length === 3 ? "md:grid-cols-3" : "md:grid-cols-6",
+                )}
+              >
                 {data.map((e: Img) => (
                   <div
                     className={cn(
-                      "group relative aspect-square cursor-pointer overflow-hidden rounded-md  ",
+                      "group relative cursor-pointer overflow-hidden rounded-md ",
                       {
                         "border-2 border-black": idState === e.id,
                       },
+                      data.length === 3 ? "h-32" : "aspect-square",
                     )}
                     key={e.id}
                     onClick={() => setIdState(e.id)}
