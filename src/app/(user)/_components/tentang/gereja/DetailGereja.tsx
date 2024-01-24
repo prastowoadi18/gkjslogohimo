@@ -28,10 +28,10 @@ export default function DetailGereja({ gereja }: DetailGerejaProps) {
           {gereja.description}
         </p>
 
-        <div className="grid grid-cols-1 gap-5 pb-20 pt-16 md:grid-cols-3">
+        <div className="grid grid-cols-2 gap-5 pb-20 pt-16 md:grid-cols-4">
           {gereja.galeri.map((e, idx) => (
             <div
-              className="relative aspect-square overflow-hidden"
+              className="relative aspect-square cursor-pointer overflow-hidden rounded-md transition-all duration-300 hover:brightness-110"
               key={idx}
               onClick={() =>
                 galeriModal.onOpen(
