@@ -30,7 +30,7 @@ export default function Galeri() {
             src={item}
             alt={`img-${idx + 1}`}
             fill
-            sizes="(min-width: 1340px) 170px, (min-width: 780px) calc(14.81vw - 26px), calc(50vw - 18px)"
+            sizes="(min-width: 1340px) 170px, (min-width: 780px) calc(14.81vw - 26px), calc(33.26vw - 17px)"
           />
         </div>
       ))}
