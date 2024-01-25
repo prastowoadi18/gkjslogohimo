@@ -2,10 +2,7 @@ import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 
 export default function JadwalIbadah() {
   return (
-    <section
-      className="mb-10 border-t border-gray-200 lg:mb-24"
-      data-aos="fade-right"
-    >
+    <section className="mb-10 border-t border-gray-200 lg:mb-24">
       <MaxWidthWrapper className="py-10">
         <div className="flex flex-col items-start gap-10 md:flex-row md:items-center">
           <div className="">

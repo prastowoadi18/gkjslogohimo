@@ -47,7 +47,7 @@ const MobileNav = ({ navmenu }: MobileNavProps) => {
         aria-label="menu-button"
         type="button"
         onClick={() => setIsOpen(true)}
-        className="relative -m-2 inline-flex items-center justify-center rounded-md p-2 text-gray-800 lg:hidden"
+        className="relative -m-2 inline-flex items-center justify-center rounded-md p-2 text-gray-800 dark:text-white lg:hidden"
       >
         <Menu className="h-7 w-7" aria-hidden="true" />
       </button>

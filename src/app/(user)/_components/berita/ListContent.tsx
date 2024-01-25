@@ -21,7 +21,7 @@ export default function ListContent({ berita }: ListContentProps) {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.3, delay: index * 0.1 }}
-          className="rounded-b-md shadow-md"
+          className="rounded-b-md shadow-md dark:bg-zinc-900"
           key={item.id}
         >
           <div className="relative h-60 overflow-hidden rounded-t-md">

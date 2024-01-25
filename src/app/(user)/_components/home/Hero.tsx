@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <MaxWidthWrapper>
       <div className="mx-auto flex max-w-3xl flex-col items-center py-20 text-center">
-        <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+        <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white/90 sm:text-6xl">
           Wilujeng Rawuh Wonten
           <span className="block bg-gradient-to-r from-blue-500 to-black/60 bg-clip-text pb-2 text-transparent">
             GKJ Slogohimo
