@@ -3,26 +3,22 @@
 import { scrollToTop } from "@/lib/utils";
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import { ThemeProvider as NextThemesProvider } from "next-themes";
+import { type ThemeProviderProps } from "next-themes/dist/types";
 
 export function RouteChangeListener({
   children,
-}: {
-  children: React.ReactNode;
-}) {
+  ...props
+}: ThemeProviderProps) {
   const pathname = usePathname();
 
   useEffect(() => {
     scrollToTop();
   }, [pathname]);
 
-  useEffect(() => {
-    AOS.init({
-      duration: 800,
-      delay: 50,
-    });
-  }, []);
-
-  return <main className="">{children}</main>;
+  return (
+    <NextThemesProvider {...props}>
+      <main className="">{children}</main>
+    </NextThemesProvider>
+  );
 }

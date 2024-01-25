@@ -52,7 +52,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="h-full !scroll-smooth">
+    <html lang="en" className="h-full !scroll-smooth" suppressHydrationWarning>
       <body
         className={cn("relative h-full font-sans antialiased", inter.className)}
       >
@@ -68,7 +68,12 @@ export default function RootLayout({
           shadow="0 0 10px #3b82f6,0 0 5px #60a5fa"
         />
 
-        <RouteChangeListener>
+        <RouteChangeListener
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
           <Navbar />
           {children}
           <Footer />

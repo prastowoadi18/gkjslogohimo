@@ -15,9 +15,8 @@ interface BeritaTerbaruProps {
 export default function BeritaTerbaru({ berita }: BeritaTerbaruProps) {
   return (
     <section
-      className="mb-10 border-t border-gray-200 bg-slate-50 lg:mb-24"
+      className="mb-10 border-t border-gray-200 bg-slate-50 dark:bg-background lg:mb-24"
       id="berita_terbaru"
-      data-aos="fade-left"
     >
       <MaxWidthWrapper className="py-20">
         <div className="flex flex-col items-start gap-10 md:flex-row md:items-center">
@@ -43,9 +42,12 @@ export default function BeritaTerbaru({ berita }: BeritaTerbaruProps) {
 
         <div className="grid grid-cols-1 gap-10 pt-20 md:grid-cols-2 lg:grid-cols-3">
           {berita.map((item) => (
-            <div className="rounded-b-md bg-white" key={item.id}>
+            <div
+              className="rounded-b-md rounded-t-md bg-white dark:bg-zinc-900"
+              key={item.id}
+            >
               <div
-                className="group relative h-64 overflow-hidden rounded-t-md bg-gray-200"
+                className="group relative h-64 overflow-hidden rounded-t-md bg-gray-200 dark:bg-background"
                 key={item.id}
               >
                 <Image
@@ -76,7 +78,7 @@ export default function BeritaTerbaru({ berita }: BeritaTerbaruProps) {
               <div className="px-6 pb-5 pt-4">
                 <Link
                   href={`/berita/${item.slug}`}
-                  className="mt-5 cursor-pointer text-base font-semibold text-blue-600 hover:text-blue-400"
+                  className="mt-5 cursor-pointer text-base font-semibold text-blue-600 hover:text-blue-500 dark:text-blue-500 dark:hover:text-blue-400"
                 >
                   baca lebih lanjut...
                 </Link>

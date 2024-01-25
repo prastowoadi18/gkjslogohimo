@@ -8,7 +8,7 @@ export default function Content() {
   return (
     <div className="grid grid-cols-1 gap-5 pb-20 pt-10 md:grid-cols-2 md:gap-8 lg:grid-cols-4 lg:gap-5 lg:pt-16">
       {TENTANG_GEREJA.pepanthan.map((item) => (
-        <div className="rounded-b-md shadow-md" key={item.id}>
+        <div className="rounded-b-md shadow-md dark:bg-zinc-900" key={item.id}>
           <div className="relative h-60 overflow-hidden rounded-t-md">
             <Image
               className="object-cover"

@@ -11,6 +11,7 @@ import { NAV_MENU } from "@/configs";
 
 import prisma from "@/lib/prisma";
 import MobileNav from "./MobileNav";
+import { ModeToggle } from "./DarkModeToggle";
 
 export default async function Navbar() {
   const berita = await prisma.berita.findMany({
@@ -35,8 +36,8 @@ export default async function Navbar() {
   });
 
   return (
-    <div className="sticky inset-x-0 top-0 z-50 h-16 bg-white">
-      <header className="relative bg-white">
+    <div className="sticky inset-x-0 top-0 z-50 h-16 bg-white dark:bg-background">
+      <header className="relative bg-white dark:bg-background">
         <MaxWidthWrapper>
           <div className="border-b border-gray-200">
             <div className="flex h-16 items-center">
@@ -110,6 +111,8 @@ export default async function Navbar() {
                       <Youtube className="h-5 w-5" />
                     </Link>
                   </div>
+                  <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
+                  <ModeToggle />
                 </div>
               </div>
             </div>
