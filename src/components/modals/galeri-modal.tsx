@@ -45,7 +45,8 @@ export const CardGaleriModal = () => {
                   className={cn(
                     "group relative cursor-pointer overflow-hidden rounded-md ",
                     {
-                      "border-2 border-black": idState === e.id,
+                      "border-2 border-black dark:border-white":
+                        idState === e.id,
                     },
                     data.length === 3 ? "h-32" : "aspect-square",
                   )}
