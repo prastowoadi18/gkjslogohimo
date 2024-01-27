@@ -17,7 +17,7 @@ export function generateMetadata(): Metadata {
       canonical: process.env.DOMAIN,
     },
     openGraph: {
-      title: `${METADATA.creator}`,
+      title: `${METADATA.openGraph.title}`,
       description: `${METADATA.description}`,
       images: `${METADATA.profile}`,
       url: `${METADATA.openGraph.url}`,
