@@ -9,7 +9,7 @@ export default function Hero() {
       <div className="mx-auto flex max-w-3xl flex-col items-center py-20 text-center">
         <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white/90 sm:text-6xl">
           Wilujeng Rawuh Wonten
-          <span className="block bg-gradient-to-r from-blue-500 to-black/60 bg-clip-text pb-2 text-transparent">
+          <span className="block bg-gradient-to-r from-blue-500 to-black/60 bg-clip-text pb-2 text-transparent dark:to-white/60">
             GKJ Slogohimo
           </span>
         </h1>

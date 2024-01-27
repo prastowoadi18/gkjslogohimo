@@ -53,6 +53,7 @@ export const METADATA = {
     url: process.env.DOMAIN,
   },
   openGraph: {
+    title: "Gereja Kristen Jawa Slogohimo Website",
     url: process.env.DOMAIN,
     siteName: "GKJ Slogohimo",
     locale: "id-ID",
