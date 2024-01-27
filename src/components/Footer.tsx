@@ -116,7 +116,7 @@ const Footer = () => {
               <div className="mt-5 lg:mt-10">
                 <div className="flex space-x-4">
                   <Link
-                    href="https://www.facebook.com"
+                    href="https://www.facebook.com/gkj.slogohimo"
                     target="_blank"
                     aria-label="Facebook"
                     className={buttonVariants({

@@ -9,9 +9,12 @@ import Image from "./Image";
 import { Facebook, Instagram, Youtube } from "lucide-react";
 import { NAV_MENU } from "@/configs";
 
-import prisma from "@/lib/prisma";
 import MobileNav from "./MobileNav";
 import { ModeToggle } from "./DarkModeToggle";
+
+import prisma from "@/lib/prisma";
+import { cn } from "@/lib/utils";
+import { dancingScript } from "@/lib/font";
 
 export default async function Navbar() {
   const berita = await prisma.berita.findMany({
@@ -41,7 +44,7 @@ export default async function Navbar() {
         <MaxWidthWrapper>
           <div className="border-b border-gray-200">
             <div className="flex h-16 items-center">
-              <div className="hidden lg:block">
+              <div className="hidden lg:mr-3 lg:flex lg:items-center">
                 <Link href="/">
                   <Image
                     src="/assets/logo.png"
@@ -52,9 +55,17 @@ export default async function Navbar() {
                     rounded="rounded-full"
                   />
                 </Link>
+                <h1
+                  className={cn(
+                    dancingScript.className,
+                    "ml-3 mt-1 text-xl font-[700] text-foreground",
+                  )}
+                >
+                  GKJ Slogohimo
+                </h1>
               </div>
               <div className="relative w-full lg:hidden">
-                <div className="flex w-full justify-center">
+                <div className="flex w-full items-center justify-center">
                   <Link href="/">
                     <Image
                       src="/assets/logo.png"
@@ -65,6 +76,14 @@ export default async function Navbar() {
                       rounded="rounded-full"
                     />
                   </Link>
+                  <h1
+                    className={cn(
+                      dancingScript.className,
+                      "ml-3 mt-1 text-2xl font-[700] text-foreground",
+                    )}
+                  >
+                    GKJ Slogohimo
+                  </h1>
                 </div>
                 <div className="absolute left-1 top-3">
                   <MobileNav navmenu={newNavMenu} />
@@ -78,7 +97,7 @@ export default async function Navbar() {
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
                   <div className="flex">
                     <Link
-                      href="https://www.facebook.com"
+                      href="https://www.facebook.com/gkj.slogohimo"
                       target="_blank"
                       aria-label="Facebook"
                       className={buttonVariants({
