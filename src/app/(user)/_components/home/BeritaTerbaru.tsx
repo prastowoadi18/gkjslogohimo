@@ -56,6 +56,7 @@ export default function BeritaTerbaru({ berita }: BeritaTerbaruProps) {
                   fill
                   sizes="(min-width: 1360px) 347px, (min-width: 1040px) 26.67vw, (min-width: 780px) calc(50vw - 100px), calc(100vw - 20px)"
                   className="object-cover group-hover:opacity-75"
+                  loading="lazy"
                 />
               </div>
               <div className="px-6 py-4">

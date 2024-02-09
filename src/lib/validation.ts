@@ -23,6 +23,7 @@ export const createMajelisSchema = z.object({
   nama: requiredString.max(100),
   bidang: requiredString.max(100),
   imageUrl: z.string(),
+  wilayah: z.string(),
 });
 
 export type CreateMajelisValues = z.infer<typeof createMajelisSchema>;
@@ -32,6 +33,13 @@ export const editMajelisSchema = z.object({
   nama: requiredString.max(100),
   bidang: requiredString.max(100),
   imageUrl: z.string(),
+  wilayah: z.string(),
 });
 
 export type EditMajelisValues = z.infer<typeof editMajelisSchema>;
+
+export const majelisFilterSchema = z.object({
+  wilayah: z.string().optional(),
+});
+
+export type MajelisFilterValues = z.infer<typeof majelisFilterSchema>;

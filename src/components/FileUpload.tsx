@@ -19,6 +19,7 @@ export const FileUpload = ({ onChange, endpoint }: FileUploadProps) => {
       onUploadError={(error: Error) => {
         toast.error(`${error?.message}`);
       }}
+      className="dark:bg-zinc-900"
     />
   );
 };

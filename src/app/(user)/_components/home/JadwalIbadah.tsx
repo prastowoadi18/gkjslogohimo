@@ -31,21 +31,21 @@ export default function JadwalIbadah() {
               <span className="font-semibold italic text-blue-600">
                 PEPANTHAN JATISRONO
               </span>{" "}
-              <span className="font-semibold">07:00 WIB</span> BAHASA JAWA
+              <span className="font-semibold">08:00 WIB</span> BAHASA JAWA
               (MINGGU I Bahasa Indonesia)
             </p>
             <p className="mt-1">
               <span className="font-semibold italic text-blue-600">
                 PEPANTHAN JATIROTO
               </span>{" "}
-              <span className="font-semibold">07:00 WIB</span> BAHASA JAWA
+              <span className="font-semibold">12:00 WIB</span> BAHASA JAWA
               (MINGGU I Bahasa Indonesia)
             </p>
             <p className="mt-1">
               <span className="font-semibold italic text-blue-600">
                 PEPANTHAN JOHO
               </span>{" "}
-              <span className="font-semibold">07:00 WIB</span> BAHASA JAWA
+              <span className="font-semibold">08:00 WIB</span> BAHASA JAWA
               (MINGGU I Bahasa Indonesia)
             </p>
           </div>

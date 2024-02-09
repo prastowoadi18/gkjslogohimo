@@ -20,6 +20,7 @@ export default function TentangGereja() {
               fill={true}
               sizes="(min-width: 1360px) 550px, (min-width: 780px) calc(44.64vw - 48px), calc(100vw - 20px)"
               className="object-cover"
+              loading="lazy"
             />
           </div>
           <div className="self-center px-5 md:px-0">

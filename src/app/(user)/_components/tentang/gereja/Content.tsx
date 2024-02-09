@@ -1,10 +1,17 @@
+"use client";
+
 import Link from "next/link";
 
 import Image from "next/image";
 
 import { TENTANG_GEREJA } from "@/configs";
+import { Button } from "@/components/ui/button";
+
+import { useCardGaleri } from "@/hooks/use-card-galeri";
 
 export default function Content() {
+  const galeriModal = useCardGaleri();
+
   return (
     <div className="grid grid-cols-1 gap-5 pb-20 pt-10 md:grid-cols-2 md:gap-8 lg:grid-cols-4 lg:gap-5 lg:pt-16">
       {TENTANG_GEREJA.pepanthan.map((item) => (
@@ -26,17 +33,40 @@ export default function Content() {
 
           <div className="px-6 py-4">
             <div className="text-lg font-bold">{item.title}</div>
-            <p className="mt-3 line-clamp-4 text-base text-muted-foreground">
-              {item.description}
-            </p>
+            {item.href ? (
+              <Link
+                href={item.href}
+                target="_blank"
+                aria-label={item.description}
+              >
+                <p className="mt-3 text-base text-muted-foreground hover:text-blue-400 hover:underline">
+                  {item.description}
+                </p>
+              </Link>
+            ) : (
+              <p className="mt-3 text-base text-muted-foreground">
+                {item.description}
+              </p>
+            )}
           </div>
-          <div className="px-6 pb-5 pt-4">
-            <Link
-              href={`/tentang/gereja/${item.slug}`}
-              className="mt-5 cursor-pointer text-base font-semibold text-blue-600 hover:text-blue-400"
+          <div className="px-6 pb-5 pt-2">
+            <Button
+              size="sm"
+              variant="outline"
+              onClick={() =>
+                galeriModal.onOpen(
+                  item.galeri.map((e, idx) => {
+                    return {
+                      id: idx + 1,
+                      title: e,
+                    };
+                  }),
+                  1,
+                )
+              }
             >
-              baca lebih lanjut...
-            </Link>
+              Lihat gambar
+            </Button>
           </div>
         </div>
       ))}

@@ -11,7 +11,6 @@ import Galeri from "./tentang/sejarah/Galeri";
 import ContentPendeta from "./tentang/pendeta/Content";
 
 import ContentGereja from "./tentang/gereja/Content";
-import DetailGereja from "./tentang/gereja/DetailGereja";
 
 import ContentJemaat from "./tentang/jemaat/Content";
 
@@ -31,7 +30,6 @@ export {
   Galeri,
   ContentPendeta,
   ContentGereja,
-  DetailGereja,
   ContentJemaat,
   ContentBerita,
   DetailBerita,

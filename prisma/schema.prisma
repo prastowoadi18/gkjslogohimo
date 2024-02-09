@@ -27,6 +27,7 @@ model Majelis {
   slug      String   @unique
   nama      String
   bidang    String
+  wilayah   String
   imageUrl  String?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
