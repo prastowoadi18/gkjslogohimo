@@ -27,7 +27,7 @@ import { editMajelis, deleteMajelis } from "../../actions";
 
 import { Majelis } from "@prisma/client";
 import Select from "@/components/ui/select";
-import { IMG_MAJELIS } from "@/configs";
+import { IMG_MAJELIS, WILAYAH } from "@/configs";
 
 interface FormEditProps {
   majelis: Majelis;
@@ -40,6 +40,7 @@ export default function FormEdit({ majelis }: FormEditProps) {
       nama: majelis.nama,
       bidang: majelis.bidang,
       imageUrl: majelis.imageUrl!,
+      wilayah: majelis.wilayah,
     },
   });
 
@@ -109,6 +110,28 @@ export default function FormEdit({ majelis }: FormEditProps) {
                     placeholder="e.g. 'Diaken"
                     {...field}
                   />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="wilayah"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Wilayah</FormLabel>
+                <FormControl>
+                  <Select {...field} defaultValue="">
+                    <option value="" hidden>
+                      Select an option
+                    </option>
+                    {WILAYAH.map((item) => (
+                      <option value={item} key={item}>
+                        {item}
+                      </option>
+                    ))}
+                  </Select>
                 </FormControl>
                 <FormMessage />
               </FormItem>

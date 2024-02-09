@@ -21,7 +21,7 @@ import { CreateMajelisValues, createMajelisSchema } from "@/lib/validation";
 
 import { createMajelis } from "../../actions";
 import Select from "@/components/ui/select";
-import { IMG_MAJELIS } from "@/configs";
+import { IMG_MAJELIS, WILAYAH } from "@/configs";
 
 export default function FormAdd() {
   const form = useForm<CreateMajelisValues>({
@@ -86,6 +86,28 @@ export default function FormAdd() {
                     placeholder="e.g. 'Diaken"
                     {...field}
                   />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="wilayah"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Wilayah</FormLabel>
+                <FormControl>
+                  <Select {...field} defaultValue="">
+                    <option value="" hidden>
+                      Select an option
+                    </option>
+                    {WILAYAH.map((item) => (
+                      <option value={item} key={item}>
+                        {item}
+                      </option>
+                    ))}
+                  </Select>
                 </FormControl>
                 <FormMessage />
               </FormItem>

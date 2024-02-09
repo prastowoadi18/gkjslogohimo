@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { TitleSection } from "@/components/TitleSection";
 import { ContentMajelis } from "../../_components";
+import { MajelisFilterValues } from "@/lib/validation";
 
 const link = [
   {
@@ -14,21 +15,39 @@ const link = [
 interface PageProps {
   searchParams: {
     page?: string;
+    wilayah?: string;
   };
 }
 
-export const metadata: Metadata = {
-  title: "Majelis",
-  description:
-    "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ab?",
-  keywords:
-    "Slogohimo, Jatisrono, Gereja, Jatiroto, Joho, Kristen, Majelis Gereja",
-  alternates: {
-    canonical: `${process.env.DOMAIN}/tentang/majelis`,
-  },
-};
+function getTitle({ wilayah }: MajelisFilterValues) {
+  const titleSuffix = wilayah ? `${wilayah}` : "";
 
-export default async function Page({ searchParams: { page } }: PageProps) {
+  return `Majelis ${titleSuffix}`;
+}
+
+export function generateMetadata({
+  searchParams: { wilayah },
+}: PageProps): Metadata {
+  return {
+    title: `${getTitle({
+      wilayah,
+    })}`,
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ab?",
+    keywords:
+      "Slogohimo, Jatisrono, Gereja, Jatiroto, Joho, Kristen, Majelis Gereja",
+    alternates: {
+      canonical: `${process.env.DOMAIN}/tentang/majelis`,
+    },
+  };
+}
+
+export default async function Page({
+  searchParams: { page, wilayah },
+}: PageProps) {
+  const filterValues: MajelisFilterValues = {
+    wilayah,
+  };
   return (
     <MaxWidthWrapper className="py-5">
       <TitleSection
@@ -37,7 +56,10 @@ export default async function Page({ searchParams: { page } }: PageProps) {
         desc="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ab?"
         link={link}
       />
-      <ContentMajelis page={page ? parseInt(page) : undefined} />
+      <ContentMajelis
+        filterValues={filterValues}
+        page={page ? parseInt(page) : undefined}
+      />
     </MaxWidthWrapper>
   );
 }

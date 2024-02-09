@@ -113,10 +113,8 @@ export const TENTANG_GEREJA = {
       title: "Slogohimo",
       type: "Gereja Induk",
       slug: "gereja-induk-slogohimo",
-      short_desc:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ab?",
-      description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe quae nisi laborum fugiat, deleniti quidem eum ducimus id sequi natus fugit odit, sint, reprehenderit impedit soluta excepturi ullam in sed rem similique? Sint, voluptas, dolore, dolor possimus provident sed vero ipsum cum labore et eius eveniet? Tempore nulla, repellendus recusandae distinctio id corrupti blanditiis accusantium minus aliquid doloremque cum pariatur placeat maiores? Voluptate nesciunt modi officiis, in cum perferendis labore itaque excepturi est impedit molestiae aspernatur quibusdam illum perspiciatis, sit debitis saepe, adipisci nihil dolorem delectus autem totam magnam. Sit, aspernatur vero fuga at autem magni eius molestias assumenda neque ad ab nulla numquam iusto! Repellat inventore culpa ea quaerat, dolorum in impedit sint voluptas soluta quia reprehenderit? Nesciunt enim deserunt molestiae corporis similique ad explicabo, quaerat ducimus sit magnam, distinctio mollitia exercitationem quasi accusantium necessitatibus, vitae eligendi adipisci veniam. Laboriosam minima quo dolorum laudantium sapiente iure nemo commodi consectetur quasi nihil omnis amet laborum provident, consequuntur libero, sit sequi? Repellendus sed aspernatur assumenda fugit quia quis nihil, similique totam incidunt fuga iusto voluptatibus voluptas expedita? Id odit, corrupti soluta delectus amet iure beatae eum provident unde quaerat iusto deleniti, obcaecati possimus quas deserunt! Velit ex numquam dicta ea commodi?",
+      description: "Alamat: Gaton RT.01/05 Waru, Slogohimo",
+      href: "https://maps.app.goo.gl/xVLUeFPwwRSDtrf87",
       imgUrl: "/assets/img2.webp",
       galeri: [
         "/assets/img2.webp",
@@ -130,10 +128,8 @@ export const TENTANG_GEREJA = {
       title: "Jatisrono",
       type: "Pepanthan",
       slug: "pepanthan-jatisrono",
-      short_desc:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ab?",
-      description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe quae nisi laborum fugiat, deleniti quidem eum ducimus id sequi natus fugit odit, sint, reprehenderit impedit soluta excepturi ullam in sed rem similique? Sint, voluptas, dolore, dolor possimus provident sed vero ipsum cum labore et eius eveniet? Tempore nulla, repellendus recusandae distinctio id corrupti blanditiis accusantium minus aliquid doloremque cum pariatur placeat maiores? Voluptate nesciunt modi officiis, in cum perferendis labore itaque excepturi est impedit molestiae aspernatur quibusdam illum perspiciatis, sit debitis saepe, adipisci nihil dolorem delectus autem totam magnam. Sit, aspernatur vero fuga at autem magni eius molestias assumenda neque ad ab nulla numquam iusto! Repellat inventore culpa ea quaerat, dolorum in impedit sint voluptas soluta quia reprehenderit? Nesciunt enim deserunt molestiae corporis similique ad explicabo, quaerat ducimus sit magnam, distinctio mollitia exercitationem quasi accusantium necessitatibus, vitae eligendi adipisci veniam. Laboriosam minima quo dolorum laudantium sapiente iure nemo commodi consectetur quasi nihil omnis amet laborum provident, consequuntur libero, sit sequi? Repellendus sed aspernatur assumenda fugit quia quis nihil, similique totam incidunt fuga iusto voluptatibus voluptas expedita? Id odit, corrupti soluta delectus amet iure beatae eum provident unde quaerat iusto deleniti, obcaecati possimus quas deserunt! Velit ex numquam dicta ea commodi?",
+      description: "Alamat: Cinderejo RT.05/02, Jatisari, Jatisrono",
+      href: "https://maps.app.goo.gl/KsSLNEosh4627uf37",
       imgUrl: "/assets/img2.webp",
       galeri: [
         "/assets/img2.webp",
@@ -147,10 +143,8 @@ export const TENTANG_GEREJA = {
       title: "Jatiroto",
       type: "Pepanthan",
       slug: "pepanthan-jatiroto",
-      short_desc:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ab?",
-      description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe quae nisi laborum fugiat, deleniti quidem eum ducimus id sequi natus fugit odit, sint, reprehenderit impedit soluta excepturi ullam in sed rem similique? Sint, voluptas, dolore, dolor possimus provident sed vero ipsum cum labore et eius eveniet? Tempore nulla, repellendus recusandae distinctio id corrupti blanditiis accusantium minus aliquid doloremque cum pariatur placeat maiores? Voluptate nesciunt modi officiis, in cum perferendis labore itaque excepturi est impedit molestiae aspernatur quibusdam illum perspiciatis, sit debitis saepe, adipisci nihil dolorem delectus autem totam magnam. Sit, aspernatur vero fuga at autem magni eius molestias assumenda neque ad ab nulla numquam iusto! Repellat inventore culpa ea quaerat, dolorum in impedit sint voluptas soluta quia reprehenderit? Nesciunt enim deserunt molestiae corporis similique ad explicabo, quaerat ducimus sit magnam, distinctio mollitia exercitationem quasi accusantium necessitatibus, vitae eligendi adipisci veniam. Laboriosam minima quo dolorum laudantium sapiente iure nemo commodi consectetur quasi nihil omnis amet laborum provident, consequuntur libero, sit sequi? Repellendus sed aspernatur assumenda fugit quia quis nihil, similique totam incidunt fuga iusto voluptatibus voluptas expedita? Id odit, corrupti soluta delectus amet iure beatae eum provident unde quaerat iusto deleniti, obcaecati possimus quas deserunt! Velit ex numquam dicta ea commodi?",
+      description: "Alamat: Kopen RT.01/03 Jatiroto",
+      href: "",
       imgUrl: "/assets/img2.webp",
       galeri: [
         "/assets/img2.webp",
@@ -164,11 +158,9 @@ export const TENTANG_GEREJA = {
       title: "Joho",
       type: "Pepanthan",
       slug: "pepanthan-joho",
-      short_desc:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ab?",
-      description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe quae nisi laborum fugiat, deleniti quidem eum ducimus id sequi natus fugit odit, sint, reprehenderit impedit soluta excepturi ullam in sed rem similique? Sint, voluptas, dolore, dolor possimus provident sed vero ipsum cum labore et eius eveniet? Tempore nulla, repellendus recusandae distinctio id corrupti blanditiis accusantium minus aliquid doloremque cum pariatur placeat maiores? Voluptate nesciunt modi officiis, in cum perferendis labore itaque excepturi est impedit molestiae aspernatur quibusdam illum perspiciatis, sit debitis saepe, adipisci nihil dolorem delectus autem totam magnam. Sit, aspernatur vero fuga at autem magni eius molestias assumenda neque ad ab nulla numquam iusto! Repellat inventore culpa ea quaerat, dolorum in impedit sint voluptas soluta quia reprehenderit? Nesciunt enim deserunt molestiae corporis similique ad explicabo, quaerat ducimus sit magnam, distinctio mollitia exercitationem quasi accusantium necessitatibus, vitae eligendi adipisci veniam. Laboriosam minima quo dolorum laudantium sapiente iure nemo commodi consectetur quasi nihil omnis amet laborum provident, consequuntur libero, sit sequi? Repellendus sed aspernatur assumenda fugit quia quis nihil, similique totam incidunt fuga iusto voluptatibus voluptas expedita? Id odit, corrupti soluta delectus amet iure beatae eum provident unde quaerat iusto deleniti, obcaecati possimus quas deserunt! Velit ex numquam dicta ea commodi?",
+      description: "Alamat: Joho RT.16/04 Jatisrono",
       imgUrl: "/assets/img2.webp",
+      href: "",
       galeri: [
         "/assets/img2.webp",
         "/assets/img5.webp",
@@ -185,32 +177,72 @@ export const TENTANG_GEREJA = {
     {
       id: 1,
       title: "Jemaat Gereja Slogohimo",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti optio fugit maiores, unde eaque qui ab sequi aut laudantium magni.",
+      total_kk: 48,
+      total_jemaat: 129,
+      detail_desc: {
+        warga_dewasa: {
+          laki: 48,
+          perempuan: 54,
+        },
+        warga_anak: {
+          laki: 17,
+          perempuan: 10,
+        },
+      },
     },
     {
       id: 2,
       title: "Jemaat Gereja Jatisrono",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti optio fugit maiores, unde eaque qui ab sequi aut laudantium magni.",
+      total_kk: 45,
+      total_jemaat: 140,
+      detail_desc: {
+        warga_dewasa: {
+          laki: 53,
+          perempuan: 46,
+        },
+        warga_anak: {
+          laki: 10,
+          perempuan: 11,
+        },
+      },
     },
     {
       id: 3,
       title: "Jemaat Gereja Jatiroto",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti optio fugit maiores, unde eaque qui ab sequi aut laudantium magni.",
+      total_kk: 15,
+      total_jemaat: 32,
+      detail_desc: {
+        warga_dewasa: {
+          laki: 12,
+          perempuan: 16,
+        },
+        warga_anak: {
+          laki: 2,
+          perempuan: 2,
+        },
+      },
     },
     {
       id: 4,
       title: "Jemaat Gereja Joho",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti optio fugit maiores, unde eaque qui ab sequi aut laudantium magni.",
+      total_kk: 24,
+      total_jemaat: 55,
+      detail_desc: {
+        warga_dewasa: {
+          laki: 16,
+          perempuan: 27,
+        },
+        warga_anak: {
+          laki: 6,
+          perempuan: 6,
+        },
+      },
     },
   ],
   info: [
     {
       title: "Jemaat",
-      description: "182",
+      description: "336",
       link: "/tentang/jemaat",
       img_url: "/assets/img3.webp",
     },
@@ -230,3 +262,4 @@ export const TENTANG_GEREJA = {
 };
 
 export const IMG_MAJELIS = ["img4.webp"];
+export const WILAYAH = ["slogohimo", "jatisrono", "jatiroto", "joho"];

@@ -19,7 +19,8 @@ export async function createMajelis(formData: FormData) {
     }
 
     const values = Object.fromEntries(formData.entries());
-    const { nama, bidang, imageUrl } = createMajelisSchema.parse(values);
+    const { nama, bidang, imageUrl, wilayah } =
+      createMajelisSchema.parse(values);
 
     const slug = `${toSlug(nama)}-${nanoid(10)}`;
 
@@ -28,6 +29,7 @@ export async function createMajelis(formData: FormData) {
         slug,
         nama: nama.trim(),
         bidang,
+        wilayah,
         imageUrl,
       },
     });
@@ -48,7 +50,8 @@ export async function editMajelis(formData: FormData) {
     const user = await currentUser();
 
     const values = Object.fromEntries(formData.entries());
-    const { id, bidang, imageUrl, nama } = editMajelisSchema.parse(values);
+    const { id, bidang, imageUrl, nama, wilayah } =
+      editMajelisSchema.parse(values);
 
     if (!user) {
       throw new Error("Not authorized");
@@ -63,6 +66,7 @@ export async function editMajelis(formData: FormData) {
         nama: nama.trim(),
         bidang,
         imageUrl,
+        wilayah,
       },
     });
   } catch (error) {

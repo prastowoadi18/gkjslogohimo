@@ -43,10 +43,12 @@ export default function Page() {
               <Settings className="h-5 w-5" />
             </div>
             <div className="flex-1">
-              <h1 className="text-lg font-semibold text-black group-hover:text-black">
+              <h1 className="text-lg font-semibold text-black group-hover:text-black dark:text-white dark:hover:text-blue-400 dark:group-hover:text-blue-400">
                 Berita
               </h1>
-              <p className="text-base italic">Manage Berita</p>
+              <p className="text-base italic text-muted-foreground">
+                Manage Berita
+              </p>
             </div>
           </div>
         </Link>
@@ -60,10 +62,12 @@ export default function Page() {
               <Settings className="h-5 w-5" />
             </div>
             <div className="flex-1">
-              <h1 className="text-lg font-semibold text-black group-hover:text-black">
+              <h1 className="text-lg font-semibold text-black group-hover:text-black dark:text-white dark:hover:text-blue-400 dark:group-hover:text-blue-400">
                 Majelis
               </h1>
-              <p className="text-base italic">Manage Majelis</p>
+              <p className="text-base italic text-muted-foreground">
+                Manage Majelis
+              </p>
             </div>
           </div>
         </Link>
